@@ -36,7 +36,6 @@ export const footerDemoLinks: NavItem[] = [
 export const footerLegalLinks: NavItem[] = [
   { href: "/contacts#privacy", labelKey: "footer.privacy" },
   { href: "/contacts#terms", labelKey: "footer.terms" },
-  { href: "/contacts#cookies", labelKey: "footer.cookies" },
 ];
 
 /** Цепочка next-page без отдельной /about */

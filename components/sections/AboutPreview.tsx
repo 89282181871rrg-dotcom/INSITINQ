@@ -23,7 +23,7 @@ export function AboutPreview() {
               <Counter item={first} />
             </div>
 
-            <p className="max-w-xl text-sm leading-relaxed text-white/85 sm:text-base">
+            <p className="max-w-xl text-base leading-relaxed text-white/85 sm:text-lg">
               {t("about.body")}
             </p>
 

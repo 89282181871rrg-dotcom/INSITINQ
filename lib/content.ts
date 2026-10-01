@@ -28,10 +28,25 @@ export const counters: CounterItem[] = [
   },
 ];
 
-export const partners: PartnerItem[] = Array.from({ length: 18 }, (_, i) => ({
-  id: `partner-${i + 1}`,
-  name: `Partner ${i + 1}`,
-}));
+export const partners: PartnerItem[] = [
+  { id: "a-logo", name: "A", logoSrc: "/images/partners/a-logo.png" },
+  {
+    id: "burabayfood",
+    name: "Burabayfood",
+    logoSrc: "/images/partners/burabayfood.png",
+  },
+  { id: "chobi", name: "Chobi", logoSrc: "/images/partners/chobi.png" },
+  { id: "dega", name: "Dega", logoSrc: "/images/partners/dega.png" },
+  { id: "ecolife", name: "Ecolife", logoSrc: "/images/partners/ecolife.png" },
+  { id: "gourmet", name: "Gourmet", logoSrc: "/images/partners/gourmet.png" },
+  { id: "izen", name: "Izen Implant", logoSrc: "/images/partners/izen.png" },
+  { id: "insaitiq-system", name: "Инсайдиксистем" },
+  { id: "kau", name: "KAU" },
+  { id: "vitalife", name: "Виталайф" },
+  { id: "kazslanets", name: "КазСланец" },
+  { id: "gk-dzort", name: "ГК Дзорт" },
+  { id: "ai-association", name: "Ассоциация ИИ" },
+];
 
 /** Порядок как на экране 16 */
 export const industries: IndustryItem[] = [

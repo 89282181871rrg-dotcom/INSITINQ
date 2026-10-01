@@ -102,7 +102,7 @@ export function Header() {
             </span>
             <span
               aria-hidden
-              className="relative block h-5 w-[4.25rem] font-pixel text-[11px] uppercase tracking-wider"
+              className="relative block h-5 w-[4.75rem] font-pixel text-xs uppercase tracking-wider sm:text-[13px]"
             >
               <span
                 className={cn(

@@ -29,12 +29,12 @@ const ru = {
   "footer.terms": "Пользовательское соглашение",
   "footer.cookies": "Политика cookies",
   "footer.nextPage": "Следующая страница",
-  "footer.backHome": "В начало",
+  "footer.backHome": "На главную",
   "footer.email": "insaitiq.systems@gmail.com",
   "footer.phone": "+7 705 555 7233",
-  "hero.title": "Разработка IT решений и AI-систем",
+  "hero.title": "Разработка\nIT решений и\nAI-систем",
   "hero.subtitle":
-    "Помогаем компаниям снижать издержки, ускорять процессы и управлять бизнесом через данные, автоматизацию и AI.",
+    "Помогаем компаниям снижать издержки,\nускорять процессы и управлять бизнесом\nчерез данные, автоматизацию и AI.",
   "hero.cta": "Наши решения",
   "about.title": "О нас",
   "about.body":
@@ -96,12 +96,12 @@ const en: Record<MessageKey, string> = {
   "footer.terms": "Terms of use",
   "footer.cookies": "Cookie policy",
   "footer.nextPage": "Next page",
-  "footer.backHome": "Back home",
+  "footer.backHome": "To home",
   "footer.email": "insaitiq.systems@gmail.com",
   "footer.phone": "+7 705 555 7233",
-  "hero.title": "IT solutions & AI systems development",
+  "hero.title": "IT solutions &\nAI systems\ndevelopment",
   "hero.subtitle":
-    "We help companies cut costs, speed up processes, and run the business through data, automation, and AI.",
+    "We help companies cut costs,\nspeed up processes and run the business\nthrough data, automation, and AI.",
   "hero.cta": "Our solutions",
   "about.title": "About us",
   "about.body":
@@ -161,12 +161,12 @@ const kz: Record<MessageKey, string> = {
   "footer.terms": "Пайдаланушы келісімі",
   "footer.cookies": "Cookie саясаты",
   "footer.nextPage": "Келесі бет",
-  "footer.backHome": "Басына",
+  "footer.backHome": "Басты бетке",
   "footer.email": "insaitiq.systems@gmail.com",
   "footer.phone": "+7 705 555 7233",
-  "hero.title": "IT шешімдер мен AI-жүйелер әзірлеу",
+  "hero.title": "IT шешімдер мен\nAI-жүйелер\nәзірлеу",
   "hero.subtitle":
-    "Компанияларға шығынды азайтуға, процестерді жеделдетуге және бизнесті деректер, автоматтандыру мен AI арқылы басқаруға көмектесеміз.",
+    "Компанияларға шығынды азайтуға,\nпроцестерді жеделдетуге және бизнесті\nдеректер, автоматтандыру мен AI арқылы басқаруға көмектесеміз.",
   "hero.cta": "Шешімдеріміз",
   "about.title": "Біз туралы",
   "about.body":

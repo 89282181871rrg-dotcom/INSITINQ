@@ -155,9 +155,6 @@ export function ContactForm() {
             >
               {t("contact.submit")}
             </Button>
-            <p className="max-w-sm text-xs leading-relaxed text-muted">
-              {t("contact.disclaimer")}
-            </p>
           </div>
         </div>
       </div>

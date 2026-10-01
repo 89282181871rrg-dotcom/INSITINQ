@@ -20,33 +20,6 @@ export function ContactsContent() {
         <ScrollReveal delay={0.08}>
           <ContactForm />
         </ScrollReveal>
-
-        <div className="mt-16 space-y-8 border-t border-border pt-10 text-sm text-muted">
-          <section id="privacy" className="scroll-mt-28">
-            <h2 className="mb-2 text-base font-semibold text-white">
-              {t("footer.privacy")}
-            </h2>
-            <p className="max-w-3xl leading-relaxed">
-              {t("contact.disclaimer")}
-            </p>
-          </section>
-          <section id="terms" className="scroll-mt-28">
-            <h2 className="mb-2 text-base font-semibold text-white">
-              {t("footer.terms")}
-            </h2>
-            <p className="max-w-3xl leading-relaxed">
-              {t("footer.terms")}
-            </p>
-          </section>
-          <section id="cookies" className="scroll-mt-28">
-            <h2 className="mb-2 text-base font-semibold text-white">
-              {t("footer.cookies")}
-            </h2>
-            <p className="max-w-3xl leading-relaxed">
-              {t("footer.cookies")}
-            </p>
-          </section>
-        </div>
       </Container>
     </section>
   );
