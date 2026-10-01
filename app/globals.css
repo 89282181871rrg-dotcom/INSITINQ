@@ -37,6 +37,7 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    overflow-x: hidden;
   }
 
   :focus-visible {
@@ -70,8 +71,8 @@
     display: flex;
     flex-shrink: 0;
     align-items: center;
-    gap: 2.5rem;
-    padding-right: 2.5rem;
+    gap: 1.75rem;
+    padding-right: 1.75rem;
   }
 
   .marquee-tile {
@@ -80,8 +81,8 @@
     align-items: center;
     justify-content: center;
     width: auto;
-    height: 7rem;
-    padding: 0.5rem 0;
+    height: 4.5rem;
+    padding: 0.35rem 0;
     border-radius: 0.5rem;
     background: transparent;
   }
@@ -89,7 +90,7 @@
   .marquee-tile img {
     width: auto;
     height: 100%;
-    max-width: 11rem;
+    max-width: 7.5rem;
     object-fit: contain;
   }
 

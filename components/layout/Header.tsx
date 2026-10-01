@@ -14,13 +14,13 @@ import type { MessageKey } from "@/lib/i18n";
 
 function Logo() {
   return (
-    <Link href="/" className="inline-flex items-center" aria-label="Insaitiq SYSTEM">
+    <Link href="/" className="inline-flex min-w-0 shrink items-center" aria-label="Insaitiq SYSTEM">
       <Image
         src="/images/logo/wordmark.png"
         alt="Insaitiq SYSTEM"
         width={140}
         height={46}
-        className="h-9 w-auto object-contain sm:h-10"
+        className="h-7 w-auto max-w-[7.5rem] object-contain sm:h-9 sm:max-w-none lg:h-10"
         priority
       />
     </Link>
@@ -53,7 +53,7 @@ export function Header() {
         scrolled && "header-scrolled",
       )}
     >
-      <Container className="relative flex h-16 items-center justify-between gap-4 lg:h-[4.5rem]">
+      <Container className="relative flex h-14 items-center justify-between gap-2 sm:h-16 sm:gap-4 lg:h-[4.5rem]">
         <Logo />
 
         <nav
@@ -82,17 +82,17 @@ export function Header() {
           })}
         </nav>
 
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex shrink-0 items-center gap-1.5 sm:gap-3">
           <Link
             href="/contacts"
-            className="inline-flex h-9 items-center justify-center rounded-pill bg-primary px-4 font-pixel text-[11px] uppercase tracking-wider text-white transition-colors hover:bg-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:px-5 sm:text-xs"
+            className="inline-flex h-9 items-center justify-center rounded-pill bg-primary px-3 font-pixel text-[10px] uppercase tracking-wider text-white transition-colors hover:bg-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:px-5 sm:text-xs"
           >
             {t("nav.discuss")}
           </Link>
 
           <button
             type="button"
-            className="inline-flex h-9 min-w-[5.5rem] items-center justify-center overflow-hidden rounded-pill border border-white/25 bg-transparent px-4 text-white"
+            className="inline-flex h-9 min-w-[4.75rem] items-center justify-center overflow-hidden rounded-pill border border-white/25 bg-transparent px-3 text-white sm:min-w-[5.5rem] sm:px-4"
             aria-expanded={menuOpen}
             aria-controls="site-menu-panel"
             onClick={() => setMenuOpen((v) => !v)}
@@ -102,7 +102,7 @@ export function Header() {
             </span>
             <span
               aria-hidden
-              className="relative block h-5 w-[4.75rem] font-pixel text-xs uppercase tracking-wider sm:text-[13px]"
+              className="relative block h-5 w-[4rem] font-pixel text-[11px] uppercase tracking-wider sm:w-[4.75rem] sm:text-[13px]"
             >
               <span
                 className={cn(

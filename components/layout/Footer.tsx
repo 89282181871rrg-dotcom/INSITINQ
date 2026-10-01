@@ -32,23 +32,23 @@ export function Footer() {
   const widthPct = isLast ? 100 : progress * 100;
 
   return (
-    <footer className="mt-8 border-t border-border bg-black pb-10 pt-10 sm:pb-12 sm:pt-12">
+    <footer className="mt-8 border-t border-border bg-black pb-10 pt-8 sm:pb-12 sm:pt-12">
       <Container>
         <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-start lg:gap-16">
-          <div className="flex flex-col gap-8 sm:flex-row sm:gap-12 lg:gap-14">
+          <div className="flex flex-col gap-8">
             <Link href="/" className="inline-flex shrink-0 items-start">
               <Image
                 src="/images/logo/wordmark.png"
                 alt="Insaitiq SYSTEM"
                 width={120}
                 height={40}
-                className="h-8 w-auto object-contain"
+                className="h-7 w-auto object-contain sm:h-8"
               />
             </Link>
 
-            <div className="flex flex-wrap gap-10 sm:gap-12 lg:gap-14">
+            <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3 sm:gap-12 lg:gap-14">
               <div>
-                <p className="mb-4 text-sm font-medium text-white">
+                <p className="mb-3 text-sm font-medium text-white sm:mb-4">
                   {t("footer.company")}
                 </p>
                 <ul className="space-y-2">
@@ -66,7 +66,7 @@ export function Footer() {
               </div>
 
               <div>
-                <p className="mb-4 text-sm font-medium text-white">
+                <p className="mb-3 text-sm font-medium text-white sm:mb-4">
                   {t("footer.demo")}
                 </p>
                 <ul className="space-y-2">
@@ -83,8 +83,8 @@ export function Footer() {
                 </ul>
               </div>
 
-              <div>
-                <p className="mb-4 text-sm font-medium text-white">
+              <div className="col-span-2 sm:col-span-1">
+                <p className="mb-3 text-sm font-medium text-white sm:mb-4">
                   {t("footer.legal")}
                 </p>
                 <ul className="space-y-2">
@@ -103,17 +103,17 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="flex w-full max-w-sm flex-col gap-10 self-start lg:max-w-none lg:items-end">
+          <div className="flex w-full flex-col gap-8 border-t border-border pt-8 sm:max-w-sm sm:gap-10 lg:max-w-none lg:items-end lg:border-0 lg:pt-0">
             <Link
               href={nextHref}
-              className="group flex items-center gap-3 self-start lg:self-end"
+              className="group flex w-full items-center gap-3 sm:w-auto lg:self-end"
             >
-              <span className="font-pixel text-[11px] uppercase leading-tight tracking-wider text-white sm:text-xs">
+              <span className="shrink-0 font-pixel text-[11px] uppercase leading-tight tracking-wider text-white sm:text-xs">
                 <span className="block">{line1}</span>
                 {line2 ? <span className="block">{line2}</span> : null}
               </span>
               <span
-                className="relative h-[3px] w-24 shrink-0 overflow-hidden rounded-full bg-white/25 sm:w-28"
+                className="relative h-[3px] min-w-0 flex-1 overflow-hidden rounded-full bg-white/25 sm:w-28 sm:flex-none"
                 role="progressbar"
                 aria-valuemin={0}
                 aria-valuemax={100}
@@ -138,7 +138,7 @@ export function Footer() {
             <div className="space-y-3 text-sm lg:text-right">
               <a
                 href={site.emailHref}
-                className="block text-white underline underline-offset-4"
+                className="block break-all text-white underline underline-offset-4 sm:break-normal"
               >
                 {site.email}
               </a>
@@ -152,7 +152,7 @@ export function Footer() {
                 <a
                   href={site.whatsappHref}
                   aria-label="WhatsApp"
-                  className="opacity-80 transition-opacity hover:opacity-100"
+                  className="inline-flex h-10 w-10 items-center justify-center opacity-80 transition-opacity hover:opacity-100"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -167,7 +167,7 @@ export function Footer() {
                 <a
                   href={site.instagramHref}
                   aria-label="Instagram"
-                  className="opacity-80 transition-opacity hover:opacity-100"
+                  className="inline-flex h-10 w-10 items-center justify-center opacity-80 transition-opacity hover:opacity-100"
                   target="_blank"
                   rel="noreferrer"
                 >

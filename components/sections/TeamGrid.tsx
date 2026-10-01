@@ -10,10 +10,10 @@ import { useLocale } from "@/lib/locale-context";
 export function TeamGrid() {
   const { t } = useLocale();
   return (
-    <section className="py-16 sm:py-20 lg:py-24">
+    <section className="py-10 sm:py-20 lg:py-24">
       <Container>
         <ScrollReveal>
-          <SectionTitle as="h1" className="mb-10 text-center sm:mb-14">
+          <SectionTitle as="h1" className="mb-8 text-center sm:mb-14">
             {t("team.title")}
           </SectionTitle>
         </ScrollReveal>

@@ -10,15 +10,15 @@ import { useLocale } from "@/lib/locale-context";
 export function IndustriesGrid() {
   const { t } = useLocale();
   return (
-    <section className="py-16 sm:py-20 lg:py-24">
+    <section className="py-10 sm:py-20 lg:py-24">
       <Container>
         <ScrollReveal>
-          <SectionTitle as="h1" className="mb-10 text-center sm:mb-14">
+          <SectionTitle as="h1" className="mb-8 text-center sm:mb-14">
             {t("industries.title")}
           </SectionTitle>
         </ScrollReveal>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
+        <div className="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 lg:gap-5">
           {industries.map((item, index) => (
             <ScrollReveal key={item.id} delay={index * 0.05}>
               <IndustryCard item={item} />

@@ -10,10 +10,10 @@ export function ContactsContent() {
   const { t } = useLocale();
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24">
+    <section className="py-10 sm:py-20 lg:py-24">
       <Container className="max-w-5xl">
         <ScrollReveal>
-          <SectionTitle as="h1" className="mb-8 text-center sm:mb-10">
+          <SectionTitle as="h1" className="mb-6 text-center sm:mb-10">
             {t("contact.heading")}
           </SectionTitle>
         </ScrollReveal>

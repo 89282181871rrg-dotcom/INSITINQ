@@ -1,0 +1,5 @@
+# Only root reference folders — do NOT ignore public/images/partners
+/partners
+/ДоИпосле
+/assets/media
+*.md

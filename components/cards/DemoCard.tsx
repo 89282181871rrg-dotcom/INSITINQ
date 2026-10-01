@@ -15,7 +15,7 @@ export function DemoCard({ item, reverse = false }: DemoCardProps) {
   return (
     <article
       id={item.id}
-      className="scroll-mt-28 grid items-center gap-8 lg:grid-cols-2 lg:gap-12"
+      className="scroll-mt-28 grid items-center gap-6 sm:gap-8 lg:grid-cols-2 lg:gap-12"
     >
       <div
         className={cn(
@@ -40,16 +40,16 @@ export function DemoCard({ item, reverse = false }: DemoCardProps) {
       </div>
 
       <div className={cn("flex flex-col", reverse && "lg:order-1")}>
-        <h3 className="font-sans text-2xl font-semibold uppercase tracking-wide text-white sm:text-3xl">
+        <h3 className="font-sans text-xl font-semibold uppercase tracking-wide text-white sm:text-3xl">
           {item.title}
         </h3>
-        <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
+        <p className="mt-3 text-sm leading-relaxed text-muted sm:mt-4 sm:text-base">
           {item.description}
         </p>
-        <div className="mt-6">
+        <div className="mt-5 sm:mt-6">
           <button
             type="button"
-            className="inline-flex h-11 items-center rounded-pill bg-primary px-6 text-sm font-medium text-white transition-colors hover:bg-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            className="inline-flex h-11 w-full items-center justify-center rounded-pill bg-primary px-6 text-sm font-medium text-white transition-colors hover:bg-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:w-auto"
           >
             {t("demo.cta")}
           </button>

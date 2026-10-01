@@ -39,7 +39,7 @@ function PartnerTiles({ items }: { items: typeof partners }) {
               className="h-full w-auto object-contain"
             />
           ) : (
-            <span className="whitespace-nowrap font-sans text-lg font-semibold uppercase tracking-wide text-white sm:text-xl md:text-2xl">
+            <span className="whitespace-nowrap font-sans text-sm font-semibold uppercase tracking-wide text-white sm:text-xl md:text-2xl">
               {p.name}
             </span>
           )}
@@ -59,7 +59,7 @@ export function Partners() {
     <section className="overflow-hidden pb-16 pt-4 sm:pb-20">
       <Container>
         <ScrollReveal>
-          <h2 className="mb-8 text-center text-3xl font-bold uppercase leading-none tracking-tight text-white sm:mb-10 sm:text-4xl lg:text-[2.5rem]">
+          <h2 className="mb-6 px-2 text-center text-[1.65rem] font-bold uppercase leading-tight tracking-tight text-white sm:mb-10 sm:text-4xl lg:text-[2.5rem]">
             {t("partners.title")}
           </h2>
         </ScrollReveal>

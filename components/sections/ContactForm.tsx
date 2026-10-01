@@ -146,12 +146,12 @@ export function ContactForm() {
             </div>
           </div>
 
-          <div className="mt-auto flex flex-col gap-4 pt-4 sm:flex-row sm:items-center">
+          <div className="mt-auto flex flex-col gap-4 pt-4">
             <Button
               type="submit"
               size="lg"
               disabled={isSubmitting}
-              className="rounded-pill border border-white/15 bg-black font-pixel uppercase tracking-wide hover:bg-black/80"
+              className="w-full rounded-pill border border-white/15 bg-black font-pixel uppercase tracking-wide hover:bg-black/80 sm:w-auto"
             >
               {t("contact.submit")}
             </Button>
