@@ -10,7 +10,7 @@ export function TeamCard({ member }: TeamCardProps) {
   const iconSrc = teamIconSrc[member.icon];
 
   return (
-    <article className="flex flex-col gap-4">
+    <article className="flex flex-col gap-2.5 sm:gap-4">
       <div className="relative aspect-[4/5] overflow-hidden rounded-xl border border-border bg-surface">
         {member.photoSrc ? (
           <Image
@@ -36,12 +36,12 @@ export function TeamCard({ member }: TeamCardProps) {
           alt=""
           width={40}
           height={40}
-          className="mt-0.5 h-9 w-9 shrink-0 object-contain sm:h-10 sm:w-10"
+          className="mt-0.5 h-8 w-8 shrink-0 object-contain sm:h-10 sm:w-10"
           aria-hidden
         />
       </div>
 
-      <p className="text-sm leading-relaxed text-muted">{member.bio}</p>
+      <p className="text-sm leading-snug text-muted sm:leading-relaxed">{member.bio}</p>
     </article>
   );
 }

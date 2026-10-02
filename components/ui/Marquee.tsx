@@ -6,12 +6,14 @@ type MarqueeProps = {
   children: React.ReactNode;
   direction?: "left" | "right";
   className?: string;
+  paused?: boolean;
 };
 
 export function Marquee({
   children,
   direction = "left",
   className,
+  paused = false,
 }: MarqueeProps) {
   return (
     <div
@@ -24,6 +26,7 @@ export function Marquee({
         className={cn(
           "flex w-max will-change-transform",
           "group-hover/marquee:[animation-play-state:paused]",
+          paused && "[animation-play-state:paused]",
           direction === "left"
             ? "animate-marquee-left"
             : "animate-marquee-right",

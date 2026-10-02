@@ -10,8 +10,8 @@ type Options = {
 
 /** IntersectionObserver helper for Scroll Reveal / Counters */
 export function useScrollReveal<T extends HTMLElement>({
-  threshold = 0.2,
-  rootMargin = "0px",
+  threshold = 0.12,
+  rootMargin = "0px 0px -8% 0px",
   once = true,
 }: Options = {}) {
   const ref = useRef<T | null>(null);

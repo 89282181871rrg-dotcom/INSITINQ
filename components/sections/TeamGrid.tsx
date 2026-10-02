@@ -18,7 +18,7 @@ export function TeamGrid() {
           </SectionTitle>
         </ScrollReveal>
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
+        <div className="grid gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3 lg:gap-10">
           {team.map((member, index) => (
             <ScrollReveal key={member.id} delay={index * 0.05}>
               <TeamCard member={member} />

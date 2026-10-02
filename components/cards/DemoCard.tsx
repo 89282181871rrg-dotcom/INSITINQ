@@ -43,7 +43,7 @@ export function DemoCard({ item, reverse = false }: DemoCardProps) {
         <h3 className="font-sans text-xl font-semibold uppercase tracking-wide text-white sm:text-3xl">
           {item.title}
         </h3>
-        <p className="mt-3 text-sm leading-relaxed text-muted sm:mt-4 sm:text-base">
+        <p className="mt-3 text-[15px] leading-relaxed text-muted sm:mt-4 sm:text-base">
           {item.description}
         </p>
         <div className="mt-5 sm:mt-6">

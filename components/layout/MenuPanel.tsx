@@ -45,7 +45,7 @@ export function MenuPanel({ open, onClose }: MenuPanelProps) {
               duration: animations.menuPanel.duration,
               ease: animations.menuPanel.ease,
             }}
-            className="absolute right-0 top-[calc(100%+0.5rem)] z-50 w-[min(100vw-1.5rem,20rem)] overflow-hidden rounded-2xl border border-border bg-[#12151a]/95 p-4 shadow-soft backdrop-blur-md sm:top-[calc(100%+0.75rem)] sm:p-5"
+            className="absolute right-0 top-[calc(100%+0.5rem)] z-50 w-[min(calc(100vw-2.5rem),20rem)] overflow-hidden rounded-2xl border border-border bg-[#12151a]/95 p-4 shadow-soft backdrop-blur-md sm:top-[calc(100%+0.75rem)] sm:p-5"
           >
             <nav className="flex flex-col gap-1" aria-label="Menu">
               {menuNav.map((item) => {

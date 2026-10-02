@@ -104,9 +104,24 @@ export function Footer() {
           </div>
 
           <div className="flex w-full flex-col gap-8 border-t border-border pt-8 sm:max-w-sm sm:gap-10 lg:max-w-none lg:items-end lg:border-0 lg:pt-0">
+            {/* Mobile: compact next-page button (same scale as slider) */}
             <Link
               href={nextHref}
-              className="group flex w-full items-center gap-3 sm:w-auto lg:self-end"
+              className="inline-flex w-auto max-w-full items-center gap-3 self-start rounded-2xl bg-[#2A2E35] py-2.5 pl-4 pr-2.5 text-white transition-colors hover:bg-[#323740] sm:hidden"
+            >
+              <span className="font-pixel text-[11px] uppercase leading-tight tracking-wider">
+                <span className="block">{line1}</span>
+                {line2 ? <span className="block">{line2}</span> : null}
+              </span>
+              <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#15181D]">
+                <ArrowRight className="h-3.5 w-3.5 text-white" strokeWidth={1.75} aria-hidden />
+              </span>
+            </Link>
+
+            {/* Desktop / tablet: progress slider */}
+            <Link
+              href={nextHref}
+              className="group hidden w-full items-center gap-3 sm:flex sm:w-auto lg:self-end"
             >
               <span className="shrink-0 font-pixel text-[11px] uppercase leading-tight tracking-wider text-white sm:text-xs">
                 <span className="block">{line1}</span>
