@@ -20,12 +20,7 @@ export function IndustriesGrid() {
 
         <div className="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 lg:gap-5">
           {industries.map((item, index) => (
-            <ScrollReveal
-              key={item.id}
-              delay={0.06 + index * 0.08}
-              y={36}
-              className="h-full"
-            >
+            <ScrollReveal key={item.id} delay={index * 0.05}>
               <IndustryCard item={item} />
             </ScrollReveal>
           ))}
