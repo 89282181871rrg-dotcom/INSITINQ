@@ -17,15 +17,15 @@ export function Hero() {
           {subtitleLines.join(" ")}
         </p>
 
-        <div className="relative isolate aspect-[2.35/1] w-full overflow-hidden rounded-2xl sm:aspect-[2.4/1] sm:rounded-3xl md:aspect-[1840/659] lg:rounded-[2rem]">
+        <div className="relative isolate aspect-[2.2/1] w-full overflow-hidden rounded-2xl sm:aspect-[2.3/1] sm:rounded-3xl md:aspect-[2.55/1] lg:aspect-[2.7/1] lg:rounded-[2rem]">
           <Image
             src="/images/hero/banner.png"
             alt=""
             fill
             priority
             quality={100}
-            className="object-cover object-center"
-            sizes="(max-width: 1280px) 100vw, 1280px"
+            className="object-cover object-[center_42%]"
+            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 100vw, 1536px"
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/25 via-transparent to-transparent" />
 
