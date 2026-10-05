@@ -47,12 +47,14 @@ export function DemoCard({ item, reverse = false }: DemoCardProps) {
           {item.description}
         </p>
         <div className="mt-5 sm:mt-6">
-          <button
-            type="button"
+          <a
+            href={item.href}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex h-11 w-full items-center justify-center rounded-pill bg-primary px-6 text-sm font-medium text-white transition-colors hover:bg-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:w-auto"
           >
             {t("demo.cta")}
-          </button>
+          </a>
         </div>
       </div>
     </article>
