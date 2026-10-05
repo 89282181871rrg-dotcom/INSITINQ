@@ -164,6 +164,7 @@ export function ContactForm() {
               >
                 {t("contact.consentLink")}
               </Link>
+              {t("contact.consentAfter")}
             </p>
           </div>
         </div>
