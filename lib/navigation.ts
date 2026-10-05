@@ -27,15 +27,16 @@ export const footerCompanyLinks: NavItem[] = [
 ];
 
 export const footerDemoLinks: NavItem[] = [
-  { href: "/demo#ailam", labelKey: "footer.demoAilam" },
-  { href: "/demo#constructor-ai", labelKey: "footer.demoConstructor" },
+  { href: "/demo#ai-school", labelKey: "footer.demoAiSchool" },
+  { href: "/demo#ai-assistant", labelKey: "footer.demoAiAssistant" },
   { href: "/demo#crm", labelKey: "footer.demoCrm" },
-  { href: "/demo#qr-menu", labelKey: "footer.demoQrMenu" },
+  { href: "/demo#restaurant-os", labelKey: "footer.demoRestaurantOs" },
 ];
 
 export const footerLegalLinks: NavItem[] = [
-  { href: "/contacts#privacy", labelKey: "footer.privacy" },
-  { href: "/contacts#terms", labelKey: "footer.terms" },
+  { href: "/legal/privacy", labelKey: "footer.privacy" },
+  { href: "/legal/consent", labelKey: "footer.consent" },
+  { href: "/legal/terms", labelKey: "footer.terms" },
 ];
 
 /** Цепочка next-page без отдельной /about */

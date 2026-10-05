@@ -33,6 +33,8 @@ export type DemoItem = {
   title: string;
   description: string;
   cta: string;
+  /** Ссылка на демо-стенд (кнопка «Протестировать») */
+  href: string;
   /** TODO: replace with real preview from mockups */
   imageSrc?: string;
   imageAlt: string;
