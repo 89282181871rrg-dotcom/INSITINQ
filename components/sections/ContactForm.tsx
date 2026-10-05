@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
@@ -155,6 +156,15 @@ export function ContactForm() {
             >
               {t("contact.submit")}
             </Button>
+            <p className="text-xs text-muted">
+              {t("contact.consentText")}{" "}
+              <Link
+                href="/legal/consent"
+                className="underline underline-offset-2 transition-colors hover:text-white"
+              >
+                {t("contact.consentLink")}
+              </Link>
+            </p>
           </div>
         </div>
       </div>
