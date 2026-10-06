@@ -212,9 +212,9 @@ const kz: Record<MessageKey, string> = {
   "contact.submit": "Жіберу",
   "contact.disclaimer":
     "Батырманы басу арқылы жеке деректерді өңдеуге келісесіз. Біз жауап беріп, келесі қадамды ұсынамыз.",
-  "contact.consentText": "Батырманы басу арқылы сіз келісесіз:",
-  "contact.consentLink": "жеке деректерді өңдеу",
-  "contact.consentAfter": ". Біз жауап беріп, келесі қадамды ұсынамыз.",
+  "contact.consentText": "Батырманы басу арқылы сіз",
+  "contact.consentLink": "жеке деректерді өңдеуге",
+  "contact.consentAfter": " келісесіз. Біз жауап беріп, келесі қадамды ұсынамыз.",
   "contact.success": "Өтінім жіберілді. Біз сізбен хабарласамыз.",
   "contact.error": "Өтінімді жіберу мүмкін болмады",
   "cases.title": "Кейстер",
