@@ -33,7 +33,7 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
               type="button"
               className={cn(
                 "flex w-full items-center gap-2.5 rounded-md px-1 py-1 text-left transition-colors",
-                active ? "text-white" : "text-muted hover:text-white",
+                active ? "font-bold text-white" : "text-muted hover:text-white",
               )}
               onClick={() => setLocale(item.code)}
             >

@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
 import { menuNav } from "@/lib/navigation";
 import { useLocale } from "@/lib/locale-context";
 import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
@@ -18,7 +17,7 @@ type MenuPanelProps = {
 
 export function MenuPanel({ open, onClose }: MenuPanelProps) {
   const pathname = usePathname();
-  const { t, locale } = useLocale();
+  const { t } = useLocale();
 
   return (
     <AnimatePresence>
@@ -45,7 +44,7 @@ export function MenuPanel({ open, onClose }: MenuPanelProps) {
               duration: animations.menuPanel.duration,
               ease: animations.menuPanel.ease,
             }}
-            className="absolute right-0 top-[calc(100%+0.5rem)] z-50 w-[min(calc(100vw-2.5rem),20rem)] overflow-hidden rounded-2xl border border-border bg-[#12151a]/95 p-4 shadow-soft backdrop-blur-md sm:top-[calc(100%+0.75rem)] sm:p-5"
+            className="absolute right-0 top-[calc(100%+0.5rem)] z-50 w-[min(calc(100vw-2.5rem),242px)] overflow-hidden rounded-2xl border border-border bg-[#12151a]/95 p-5 shadow-soft backdrop-blur-md sm:top-[calc(100%+0.75rem)]"
           >
             <nav className="flex flex-col gap-1" aria-label="Menu">
               {menuNav.map((item) => {
@@ -78,18 +77,7 @@ export function MenuPanel({ open, onClose }: MenuPanelProps) {
               })}
             </nav>
 
-            <div className="mt-5 border-t border-border pt-4">
-              <div className="mb-3 flex items-center gap-2 text-sm text-muted">
-                <Image
-                  src="/icons/globe.png"
-                  alt=""
-                  width={16}
-                  height={16}
-                  className="opacity-90"
-                  aria-hidden
-                />
-                <span className="font-pixel text-xs uppercase">{locale}</span>
-              </div>
+            <div className="mt-5 border-t border-border pt-5">
               <LanguageSwitcher />
             </div>
           </motion.div>

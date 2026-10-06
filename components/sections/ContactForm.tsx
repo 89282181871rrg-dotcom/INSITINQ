@@ -83,27 +83,25 @@ export function ContactForm() {
       className="rounded-[1.75rem] border border-border bg-card p-5 shadow-soft sm:rounded-[2rem] sm:p-8 lg:p-10"
       noValidate
     >
-      <div className="grid gap-8 lg:grid-cols-2 lg:items-start lg:gap-10">
-        <div className="flex min-h-0 flex-col">
-          <h2 className="font-pixel text-3xl uppercase tracking-wide text-white sm:text-4xl lg:text-5xl">
-            {t("contact.formTitle")}
-          </h2>
-          <p className="mt-4 max-w-md text-sm font-medium leading-relaxed text-white sm:text-base">
-            {t("contact.formIntro")}
-          </p>
-          <div className="mt-8 flex-1">
-            <Textarea
-              label={t("contact.task")}
-              placeholder={t("contact.taskPlaceholder")}
-              className="min-h-[200px] lg:min-h-[260px]"
-              error={errors.task?.message}
-              success={success}
-              {...register("task")}
-            />
-          </div>
-        </div>
+      {/* Заголовок и подзаголовок — на всю ширину карточки */}
+      <h2 className="font-pixel text-3xl uppercase tracking-[0.025em] text-white sm:text-4xl lg:text-5xl">
+        {t("contact.formTitle")}
+      </h2>
+      <p className="mt-5 text-sm font-medium leading-6 text-white sm:text-base">
+        {t("contact.formIntro")}
+      </p>
 
-        <div className="flex flex-col gap-4 lg:pt-1">
+      <div className="mt-5 grid gap-5 lg:grid-cols-2 lg:gap-[42px]">
+        <Textarea
+          aria-label={t("contact.task")}
+          placeholder={t("contact.taskPlaceholder")}
+          className="min-h-[200px] lg:h-[284px] lg:min-h-[260px]"
+          error={errors.task?.message}
+          success={success}
+          {...register("task")}
+        />
+
+        <div className="flex flex-col gap-4">
           <div className="relative">
             <FieldIcon src="/icons/form-user.png" />
             <Input
@@ -147,16 +145,16 @@ export function ContactForm() {
             </div>
           </div>
 
-          <div className="mt-auto flex flex-col gap-4 pt-4">
+          <div className="flex flex-col gap-4 pt-4">
             <Button
               type="submit"
               size="lg"
               disabled={isSubmitting}
-              className="w-full rounded-pill border border-white/15 bg-black font-pixel uppercase tracking-wide hover:bg-black/80 sm:w-auto"
+              className="h-12 w-full rounded-pill border border-white/15 bg-primary font-pixel uppercase tracking-wide hover:bg-primary-hover"
             >
               {t("contact.submit")}
             </Button>
-            <p className="text-xs text-muted">
+            <p className="text-xs leading-4 text-muted">
               {t("contact.consentText")}{" "}
               <Link
                 href="/legal/consent"
