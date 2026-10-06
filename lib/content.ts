@@ -21,11 +21,6 @@ export const counters: CounterItem[] = [
     suffix: "%",
     prefix: "ДО ",
   },
-  {
-    value: "ENTERPRISE",
-    label: "AI-платформы",
-    numericTarget: null,
-  },
 ];
 
 export const partners: PartnerItem[] = [

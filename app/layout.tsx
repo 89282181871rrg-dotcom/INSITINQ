@@ -21,8 +21,8 @@ const pixeloid = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: "Insaitiq SYSTEM",
-    template: "%s · Insaitiq SYSTEM",
+    default: "Insaitiq Systems",
+    template: "%s · Insaitiq Systems",
   },
   description:
     "Разработка IT решений и AI-систем. Помогаем компаниям снижать издержки, ускорять процессы и управлять бизнесом через данные, автоматизацию и AI.",

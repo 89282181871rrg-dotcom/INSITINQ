@@ -82,8 +82,8 @@ const config: Config = {
         },
       },
       animation: {
-        "marquee-left": "marquee-left 40s linear infinite",
-        "marquee-right": "marquee-right 40s linear infinite",
+        "marquee-left": "marquee-left 52s linear infinite",
+        "marquee-right": "marquee-right 52s linear infinite",
         shake: "shake 0.45s ease-in-out",
         "success-pulse": "success-pulse 0.7s ease-out",
       },

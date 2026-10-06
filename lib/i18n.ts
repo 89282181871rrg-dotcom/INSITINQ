@@ -43,7 +43,7 @@ const ru = {
   "hero.cta": "Наши решения",
   "about.title": "О нас",
   "about.body":
-    "Insaitiq Systems — синергия специалистов с глубоким пониманием операционных процессов, закупок, документооборота, аналитики и корпоративного управления. Внедряем AI там, где он дает реальный экономический эффект.",
+    "Insaitiq Systems — синергия специалистов с глубоким пониманием операционных процессов, закупок, документооборота, аналитики и корпоративного управления. Разрабатываем Enterprise-платформы и внедряем AI там, где он дает реальный экономический эффект.",
   "partners.title": "Партнёры и компании",
   "industries.title": "Опыт работы в ключевых отраслях",
   "demo.title": "Демо",
@@ -118,7 +118,7 @@ const en: Record<MessageKey, string> = {
   "hero.cta": "Our solutions",
   "about.title": "About us",
   "about.body":
-    "Insaitiq Systems is a team of specialists with deep expertise in operations, procurement, document flow, analytics, and corporate governance. We deploy AI where it creates real economic impact.",
+    "Insaitiq Systems is a team of specialists with deep expertise in operations, procurement, document flow, analytics, and corporate governance. We build Enterprise platforms and deploy AI where it creates real economic impact.",
   "partners.title": "Partners & companies",
   "industries.title": "Experience across key industries",
   "demo.title": "Demo",
@@ -191,7 +191,7 @@ const kz: Record<MessageKey, string> = {
   "hero.cta": "Шешімдеріміз",
   "about.title": "Біз туралы",
   "about.body":
-    "Insaitiq Systems — операциялық процестер, сатып алу, құжат айналымы, аналитика және корпоративтік басқаруды терең түсінетін мамандар синергиясы. AI-ды нақты экономикалық әсер беретін жерге енгіземіз.",
+    "Insaitiq Systems — операциялық процестер, сатып алу, құжат айналымы, аналитика және корпоративтік басқаруды терең түсінетін мамандар синергиясы. Enterprise-платформаларды әзірлеп, AI-ды нақты экономикалық әсер беретін жерге енгіземіз.",
   "partners.title": "Серіктестер мен компаниялар",
   "industries.title": "Негізгі салалардағы тәжірибе",
   "demo.title": "Демо",

@@ -22,7 +22,6 @@ const en: ContentTranslation = {
   counters: [
     { value: "2-4X", label: "Faster processes", prefix: "2-", suffix: "X" },
     { value: "UP TO 30%", label: "Lower OPEX", prefix: "UP TO ", suffix: "%" },
-    { value: "ENTERPRISE", label: "AI platforms" },
   ],
   industries: {
     finance: {
@@ -113,7 +112,6 @@ const kz: ContentTranslation = {
       prefix: "",
       suffix: "%-ҒА ДЕЙІН",
     },
-    { value: "ENTERPRISE", label: "AI-платформалар" },
   ],
   industries: {
     finance: {

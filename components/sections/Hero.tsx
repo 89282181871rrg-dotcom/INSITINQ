@@ -13,7 +13,7 @@ export function Hero() {
   return (
     <section className="pb-8 pt-5 sm:pb-14 sm:pt-8">
       <Container>
-        <p className="mb-5 max-w-xl text-left text-[0.95rem] leading-snug text-white/90 sm:mb-10 sm:max-w-2xl sm:text-lg sm:leading-relaxed md:text-xl">
+        <p className="mb-5 text-left text-[0.95rem] leading-snug text-white/90 sm:mb-10 sm:text-lg sm:leading-relaxed md:text-xl">
           {subtitleLines.join(" ")}
         </p>
 
