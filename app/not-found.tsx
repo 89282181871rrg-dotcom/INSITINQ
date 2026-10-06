@@ -11,7 +11,7 @@ export default function NotFound() {
     <section className="flex min-h-[60vh] items-center py-20">
       <Container className="max-w-xl text-center">
         <p className="font-display text-6xl font-semibold text-primary">404</p>
-        <h1 className="mt-4 font-display text-2xl font-semibold text-white sm:text-3xl">
+        <h1 className="mt-4 font-display text-2xl font-semibold text-foreground sm:text-3xl">
           {t("notFound.title")}
         </h1>
         <p className="mt-3 text-muted">

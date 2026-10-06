@@ -18,7 +18,7 @@ function FieldIcon({ src }: { src: string }) {
       alt=""
       width={18}
       height={18}
-      className="pointer-events-none absolute left-4 top-[2.9rem] h-[18px] w-[18px] object-contain opacity-90"
+      className="theme-invert pointer-events-none absolute left-4 top-[2.9rem] h-[18px] w-[18px] object-contain opacity-90"
       aria-hidden
     />
   );
@@ -84,10 +84,10 @@ export function ContactForm() {
       noValidate
     >
       {/* Заголовок и подзаголовок — на всю ширину карточки */}
-      <h2 className="font-pixel text-3xl uppercase tracking-[0.025em] text-white sm:text-4xl lg:text-5xl">
+      <h2 className="font-pixel text-3xl uppercase tracking-[0.025em] text-foreground sm:text-4xl lg:text-5xl">
         {t("contact.formTitle")}
       </h2>
-      <p className="mt-5 text-sm font-medium leading-6 text-white sm:text-base">
+      <p className="mt-5 text-sm font-medium leading-6 text-foreground sm:text-base">
         {t("contact.formIntro")}
       </p>
 
@@ -158,7 +158,7 @@ export function ContactForm() {
               {t("contact.consentText")}{" "}
               <Link
                 href="/legal/consent"
-                className="underline underline-offset-2 transition-colors hover:text-white"
+                className="underline underline-offset-2 transition-colors hover:text-foreground"
               >
                 {t("contact.consentLink")}
               </Link>

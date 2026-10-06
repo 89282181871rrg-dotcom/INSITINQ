@@ -17,10 +17,10 @@ export function IndustryCard({ item }: IndustryCardProps) {
         alt=""
         width={40}
         height={40}
-        className="h-9 w-9 object-contain sm:h-10 sm:w-10"
+        className="theme-invert h-9 w-9 object-contain sm:h-10 sm:w-10"
         aria-hidden
       />
-      <h3 className="font-sans text-base font-semibold text-white sm:text-xl">
+      <h3 className="font-sans text-base font-semibold text-foreground sm:text-xl">
         {item.title}
       </h3>
       <p className="mt-auto text-sm leading-relaxed text-muted">

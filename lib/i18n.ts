@@ -32,6 +32,8 @@ const ru = {
   "footer.nextPage": "Следующая страница",
   "footer.backHome": "На главную",
   "footer.toTop": "Наверх",
+  "theme.toLight": "Светлая тема",
+  "theme.toDark": "Тёмная тема",
   "notFound.title": "Страница не найдена",
   "notFound.body":
     "Такого адреса нет. Вернитесь на главную или выберите раздел в меню.",
@@ -108,6 +110,8 @@ const en: Record<MessageKey, string> = {
   "footer.nextPage": "Next page",
   "footer.backHome": "To home",
   "footer.toTop": "Back to top",
+  "theme.toLight": "Light theme",
+  "theme.toDark": "Dark theme",
   "notFound.title": "Page not found",
   "notFound.body":
     "This address does not exist. Go back to the home page or choose a section in the menu.",
@@ -182,6 +186,8 @@ const kz: Record<MessageKey, string> = {
   "footer.nextPage": "Келесі бет",
   "footer.backHome": "Басты бетке",
   "footer.toTop": "Жоғары",
+  "theme.toLight": "Жарық тақырып",
+  "theme.toDark": "Қараңғы тақырып",
   "notFound.title": "Бет табылмады",
   "notFound.body":
     "Мұндай мекенжай жоқ. Басты бетке оралыңыз немесе мәзірден бөлімді таңдаңыз.",

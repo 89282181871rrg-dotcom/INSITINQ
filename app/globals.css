@@ -12,6 +12,8 @@
   --rgb-secondary: 10 132 255;
   --rgb-danger: 239 68 68;
   --rgb-success: 34 197 94;
+  --rgb-footer: 0 0 0;
+  --rgb-menu: 18 21 26;
 
   --color-background: #0b0d10;
   --color-foreground: #ffffff;
@@ -30,6 +32,59 @@
   --radius-pill: 999px;
 }
 
+/* Светлая тема (по умолчанию — тёмная). Включается атрибутом data-theme="light" на <html>. */
+:root[data-theme="light"] {
+  --rgb-background: 246 247 249;
+  --rgb-foreground: 16 24 40;
+  --rgb-surface: 255 255 255;
+  --rgb-card: 255 255 255;
+  --rgb-muted: 82 91 110;
+  --rgb-footer: 236 238 242;
+  --rgb-menu: 255 255 255;
+
+  --color-background: #f6f7f9;
+  --color-foreground: #101828;
+  --color-surface: #ffffff;
+  --color-card: #ffffff;
+  --color-muted: #525b6e;
+  --color-border: rgba(16, 24, 40, 0.1);
+
+  color-scheme: light;
+}
+
+:root:not([data-theme="light"]) {
+  color-scheme: dark;
+}
+
+/* Мягкие тени карточек в светлой теме */
+:root[data-theme="light"] .shadow-soft {
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.08);
+}
+
+/* Мягкая тень шапки в светлой теме */
+:root[data-theme="light"] .header-scrolled {
+  box-shadow: 0 8px 28px rgba(16, 24, 40, 0.08);
+}
+
+/* Белые логотипы партнёров и белые PNG-иконки на светлом фоне — инвертируем */
+:root[data-theme="light"] .marquee-tile img,
+:root[data-theme="light"] .theme-invert {
+  filter: invert(1);
+}
+
+/* Логотип в шапке: вариант под тему */
+.theme-logo-light {
+  display: none;
+}
+
+:root[data-theme="light"] .theme-logo-dark {
+  display: none;
+}
+
+:root[data-theme="light"] .theme-logo-light {
+  display: block;
+}
+
 @layer base {
   html {
     @apply scroll-smooth;
@@ -46,7 +101,7 @@
 
   ::selection {
     background: rgb(47 128 237 / 0.35);
-    color: #fff;
+    color: rgb(var(--rgb-foreground));
   }
 }
 

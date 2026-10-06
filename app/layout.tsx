@@ -4,6 +4,7 @@ import { Unbounded } from "next/font/google";
 import { Providers } from "@/components/Providers";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { themeInitScript } from "@/lib/theme";
 import "./globals.css";
 
 const unbounded = Unbounded({
@@ -34,7 +35,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru" className={`${unbounded.variable} ${pixeloid.variable}`}>
+    <html
+      lang="ru"
+      className={`${unbounded.variable} ${pixeloid.variable}`}
+      suppressHydrationWarning
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className="min-h-screen bg-background font-sans text-foreground antialiased">
         <Providers>
           <Header />

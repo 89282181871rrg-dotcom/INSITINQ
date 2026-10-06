@@ -44,7 +44,7 @@ export function MenuPanel({ open, onClose }: MenuPanelProps) {
               duration: animations.menuPanel.duration,
               ease: animations.menuPanel.ease,
             }}
-            className="absolute right-0 top-[calc(100%+0.5rem)] z-50 w-[min(calc(100vw-2.5rem),242px)] overflow-hidden rounded-2xl border border-border bg-[#12151a]/95 p-5 shadow-soft backdrop-blur-md sm:top-[calc(100%+0.75rem)]"
+            className="absolute right-0 top-[calc(100%+0.5rem)] z-50 w-[min(calc(100vw-2.5rem),242px)] overflow-hidden rounded-2xl border border-border bg-menu/95 p-5 shadow-soft backdrop-blur-md sm:top-[calc(100%+0.75rem)]"
           >
             <nav className="flex flex-col gap-1" aria-label="Menu">
               {menuNav.map((item) => {
@@ -59,8 +59,8 @@ export function MenuPanel({ open, onClose }: MenuPanelProps) {
                     className={cn(
                       "flex items-center gap-3 rounded-lg px-2 py-2.5 font-pixel text-sm uppercase tracking-wider transition-colors",
                       active
-                        ? "text-white"
-                        : "text-white/70 hover:text-white",
+                        ? "text-foreground"
+                        : "text-foreground/70 hover:text-foreground",
                     )}
                     onClick={onClose}
                   >

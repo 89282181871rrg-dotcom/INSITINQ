@@ -35,6 +35,8 @@ const config: Config = {
           muted: "rgb(47 128 237 / 0.35)",
         },
         border: "var(--color-border)",
+        footer: withAlpha("--rgb-footer"),
+        menu: withAlpha("--rgb-menu"),
         danger: withAlpha("--rgb-danger"),
         success: withAlpha("--rgb-success"),
       },

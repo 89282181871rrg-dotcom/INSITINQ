@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Container } from "@/components/ui/Container";
 import { MenuPanel } from "@/components/layout/MenuPanel";
+import { ThemeToggle } from "@/components/layout/ThemeToggle";
 import { useHeaderScrolled } from "@/lib/hooks/useHeaderScrolled";
 import { mainNav } from "@/lib/navigation";
 import { useLocale } from "@/lib/locale-context";
@@ -23,8 +24,16 @@ function Logo() {
         width={211}
         height={62}
         unoptimized
-        className="h-7 w-auto max-w-[7.5rem] object-contain sm:h-9 sm:max-w-none lg:h-10"
+        className="theme-logo-dark h-7 w-auto max-w-[7.5rem] object-contain sm:h-9 sm:max-w-none lg:h-10"
         priority
+      />
+      <Image
+        src="/images/logo/insaitiq-light.svg"
+        alt="Insaitiq Systems"
+        width={211}
+        height={62}
+        unoptimized
+        className="theme-logo-light h-7 w-auto max-w-[7.5rem] object-contain sm:h-9 sm:max-w-none lg:h-10"
       />
     </Link>
   );
@@ -74,8 +83,8 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "font-pixel text-xs uppercase tracking-wider transition-colors hover:text-white sm:text-[13px]",
-                  active ? "text-white" : "text-white/80",
+                  "font-pixel text-xs uppercase tracking-wider transition-colors hover:text-foreground sm:text-[13px]",
+                  active ? "text-foreground" : "text-foreground/80",
                 )}
                 aria-current={active ? "page" : undefined}
               >
@@ -86,6 +95,7 @@ export function Header() {
         </nav>
 
         <div className="flex shrink-0 items-center gap-1.5 sm:gap-3">
+          <ThemeToggle />
           <Link
             href="/contacts"
             className="inline-flex h-9 items-center justify-center rounded-pill bg-primary px-3 font-pixel text-[10px] uppercase tracking-wider text-white transition-colors hover:bg-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:px-5 sm:text-xs"
@@ -95,7 +105,7 @@ export function Header() {
 
           <button
             type="button"
-            className="inline-flex h-9 min-w-[4.75rem] items-center justify-center overflow-hidden rounded-pill border border-white/25 bg-transparent px-3 text-white sm:min-w-[5.5rem] sm:px-4"
+            className="inline-flex h-9 min-w-[4.75rem] items-center justify-center overflow-hidden rounded-pill border border-foreground/25 bg-transparent px-3 text-foreground sm:min-w-[5.5rem] sm:px-4"
             aria-expanded={menuOpen}
             aria-controls="site-menu-panel"
             onClick={() => setMenuOpen((v) => !v)}

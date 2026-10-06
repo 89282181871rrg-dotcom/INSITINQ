@@ -42,7 +42,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="relative mt-8 border-t border-border bg-black py-10 sm:py-12">
+    <footer className="relative mt-8 border-t border-border bg-footer py-10 sm:py-12">
       {/* Кнопка «Наверх»: на широких экранах — в правом верхнем углу подвала,
           на остальных — отдельной строкой над колонками */}
       <div className="2xl:absolute 2xl:right-3 2xl:top-8">
@@ -50,7 +50,7 @@ export function Footer() {
           <button
             type="button"
             onClick={scrollToTop}
-            className="inline-flex items-center gap-2 rounded-pill border border-white/[0.08] bg-white/5 px-4 py-3 text-sm font-medium text-white backdrop-blur-md transition-colors hover:bg-white/10"
+            className="inline-flex items-center gap-2 rounded-pill border border-foreground/[0.08] bg-foreground/5 px-4 py-3 text-sm font-medium text-foreground backdrop-blur-md transition-colors hover:bg-foreground/10"
           >
             <ArrowUp className="h-4 w-4" strokeWidth={2} aria-hidden />
             {t("footer.toTop")}
@@ -65,7 +65,7 @@ export function Footer() {
               key={column.title}
               className={cn(index === 2 && "col-span-2 sm:col-span-1")}
             >
-              <p className="mb-3 text-sm font-medium text-white">
+              <p className="mb-3 text-sm font-medium text-foreground">
                 {column.title}
               </p>
               <ul className="space-y-1">
@@ -73,7 +73,7 @@ export function Footer() {
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className="text-sm leading-5 text-muted transition-colors hover:text-white"
+                      className="text-sm leading-5 text-muted transition-colors hover:text-foreground"
                     >
                       {t(item.labelKey as MessageKey)}
                     </Link>
@@ -87,14 +87,14 @@ export function Footer() {
             {/* Mobile: compact next-page button (same scale as slider) */}
             <Link
               href={nextHref}
-              className="inline-flex w-auto max-w-full items-center gap-3 self-start rounded-2xl bg-[#2A2E35] py-2.5 pl-4 pr-2.5 text-white transition-colors hover:bg-[#323740] sm:hidden"
+              className="inline-flex w-auto max-w-full items-center gap-3 self-start rounded-2xl bg-foreground/10 py-2.5 pl-4 pr-2.5 text-foreground transition-colors hover:bg-foreground/15 sm:hidden"
             >
               <span className="font-pixel text-[11px] uppercase leading-tight tracking-wider">
                 <span className="block">{line1}</span>
                 {line2 ? <span className="block">{line2}</span> : null}
               </span>
-              <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#15181D]">
-                <ArrowRight className="h-3.5 w-3.5 text-white" strokeWidth={1.75} aria-hidden />
+              <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-background">
+                <ArrowRight className="h-3.5 w-3.5 text-foreground" strokeWidth={1.75} aria-hidden />
               </span>
             </Link>
 
@@ -103,12 +103,12 @@ export function Footer() {
               href={nextHref}
               className="group hidden w-full items-center gap-3 sm:flex"
             >
-              <span className="shrink-0 font-pixel text-[11px] uppercase leading-tight tracking-wider text-white sm:text-xs">
+              <span className="shrink-0 font-pixel text-[11px] uppercase leading-tight tracking-wider text-foreground sm:text-xs">
                 <span className="block">{line1}</span>
                 {line2 ? <span className="block">{line2}</span> : null}
               </span>
               <span
-                className="relative h-[3px] w-28 shrink-0 overflow-hidden rounded-full bg-white/25"
+                className="relative h-[3px] w-28 shrink-0 overflow-hidden rounded-full bg-foreground/25"
                 role="progressbar"
                 aria-valuemin={0}
                 aria-valuemax={100}
@@ -124,7 +124,7 @@ export function Footer() {
                 />
               </span>
               <ArrowRight
-                className="h-4 w-4 shrink-0 text-white transition-transform group-hover:translate-x-0.5"
+                className="h-4 w-4 shrink-0 text-foreground transition-transform group-hover:translate-x-0.5"
                 strokeWidth={1.75}
                 aria-hidden
               />
@@ -133,14 +133,14 @@ export function Footer() {
             <div className="flex flex-col gap-3 text-sm">
               <a
                 href={site.emailHref}
-                className="break-all text-white underline underline-offset-4 sm:break-normal"
+                className="break-all text-foreground underline underline-offset-4 sm:break-normal"
               >
                 {site.email}
               </a>
               <div className="flex items-center gap-2.5">
                 <a
                   href={site.phoneHref}
-                  className="text-white underline underline-offset-4"
+                  className="text-foreground underline underline-offset-4"
                 >
                   {site.phone}
                 </a>
@@ -148,7 +148,7 @@ export function Footer() {
                   <a
                     href={site.whatsappHref}
                     aria-label="WhatsApp"
-                    className="inline-flex h-10 w-10 items-center justify-center text-white opacity-80 transition-opacity hover:opacity-100"
+                    className="inline-flex h-10 w-10 items-center justify-center text-foreground opacity-80 transition-opacity hover:opacity-100"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -157,7 +157,7 @@ export function Footer() {
                   <a
                     href={site.instagramHref}
                     aria-label="Instagram"
-                    className="inline-flex h-10 w-10 items-center justify-center text-white opacity-80 transition-opacity hover:opacity-100"
+                    className="inline-flex h-10 w-10 items-center justify-center text-foreground opacity-80 transition-opacity hover:opacity-100"
                     target="_blank"
                     rel="noreferrer"
                   >

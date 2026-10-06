@@ -28,11 +28,11 @@ export function NextPageTrigger() {
             className="group ml-auto flex w-full max-w-md flex-col gap-2 sm:ml-0 sm:max-w-lg md:ml-auto"
           >
             <div className="flex items-center gap-3">
-              <span className="whitespace-nowrap text-sm font-medium uppercase tracking-wide text-white/90">
+              <span className="whitespace-nowrap text-sm font-medium uppercase tracking-wide text-foreground/90">
                 {label}
               </span>
               <span
-                className="relative h-2 flex-1 overflow-hidden rounded-full bg-white/20"
+                className="relative h-2 flex-1 overflow-hidden rounded-full bg-foreground/20"
                 role="progressbar"
                 aria-valuemin={0}
                 aria-valuemax={100}
@@ -48,7 +48,7 @@ export function NextPageTrigger() {
                 />
               </span>
               <ArrowRight
-                className="h-5 w-5 shrink-0 text-white transition-transform duration-300 group-hover:translate-x-0.5"
+                className="h-5 w-5 shrink-0 text-foreground transition-transform duration-300 group-hover:translate-x-0.5"
                 strokeWidth={1.75}
                 aria-hidden
               />

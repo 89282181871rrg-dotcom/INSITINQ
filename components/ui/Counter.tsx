@@ -23,7 +23,7 @@ export function Counter({ item, compact = false }: CounterProps) {
     <div ref={ref} className="space-y-1.5 text-center sm:space-y-2">
       <p
         className={cn(
-          "font-bold leading-none tracking-tight text-white break-words",
+          "font-bold leading-none tracking-tight text-foreground break-words",
           compact
             ? "text-[0.95rem] sm:text-4xl"
             : "text-[1.65rem] sm:text-4xl lg:text-[2.5rem]",

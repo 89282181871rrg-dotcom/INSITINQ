@@ -40,7 +40,7 @@ export function DemoCard({ item, reverse = false }: DemoCardProps) {
       </div>
 
       <div className={cn("flex flex-col", reverse && "lg:order-1")}>
-        <h3 className="font-sans text-xl font-semibold uppercase tracking-wide text-white sm:text-3xl">
+        <h3 className="font-sans text-xl font-semibold uppercase tracking-wide text-foreground sm:text-3xl">
           {item.title}
         </h3>
         <p className="mt-3 text-[15px] leading-relaxed text-muted sm:mt-4 sm:text-base">

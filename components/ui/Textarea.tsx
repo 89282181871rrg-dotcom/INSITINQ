@@ -23,7 +23,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
           aria-invalid={Boolean(error) || undefined}
           aria-describedby={error ? `${inputId}-error` : undefined}
           className={cn(
-            "min-h-32 w-full rounded-card border border-white/50 bg-surface px-4 py-3 text-foreground placeholder:text-muted/70 transition-[box-shadow,border-color]",
+            "min-h-32 w-full rounded-card border border-foreground/50 bg-surface px-4 py-3 text-foreground placeholder:text-muted/70 transition-[box-shadow,border-color]",
             error && "animate-shake border-danger shadow-[0_0_0_1px_var(--color-danger)]",
             success && "animate-success-pulse border-success",
             className,

@@ -44,10 +44,10 @@ export function TeamCard({ member }: TeamCardProps) {
       </div>
 
       <div className="flex items-center justify-between gap-3">
-        <h3 className="font-sans text-base font-semibold leading-snug text-white sm:text-lg">
+        <h3 className="font-sans text-base font-semibold leading-snug text-foreground sm:text-lg">
           {member.firstName} {member.lastName}
         </h3>
-        <span className="flex h-8 w-8 shrink-0 items-center justify-center text-white">
+        <span className="flex h-8 w-8 shrink-0 items-center justify-center text-foreground">
           <RoleIcon className="h-6 w-6" />
         </span>
       </div>

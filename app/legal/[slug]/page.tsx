@@ -32,8 +32,8 @@ export default function LegalPage({ params }: LegalPageProps) {
               href={`/legal/${item.slug}`}
               className={
                 item.slug === doc.slug
-                  ? "rounded-full bg-white px-4 py-2 text-sm text-black"
-                  : "rounded-full border border-border px-4 py-2 text-sm text-muted transition-colors hover:text-white"
+                  ? "rounded-full bg-foreground px-4 py-2 text-sm text-background"
+                  : "rounded-full border border-border px-4 py-2 text-sm text-muted transition-colors hover:text-foreground"
               }
             >
               {item.shortTitle}
@@ -47,7 +47,7 @@ export default function LegalPage({ params }: LegalPageProps) {
           ))}
         </div>
 
-        <h1 className="text-2xl font-semibold uppercase leading-tight text-white sm:text-3xl">
+        <h1 className="text-2xl font-semibold uppercase leading-tight text-foreground sm:text-3xl">
           {doc.title}
         </h1>
         <p className="mt-3 text-muted">{doc.subtitle}</p>
@@ -61,7 +61,7 @@ export default function LegalPage({ params }: LegalPageProps) {
         <div className="mt-10 space-y-10">
           {doc.sections.map((section) => (
             <article key={section.heading}>
-              <h2 className="text-lg font-semibold text-white sm:text-xl">
+              <h2 className="text-lg font-semibold text-foreground sm:text-xl">
                 {section.heading}
               </h2>
               <div className="mt-4 space-y-3 text-sm leading-relaxed text-muted sm:text-base">
