@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowUp } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { Container } from "@/components/ui/Container";
+import { InstagramIcon, WhatsAppIcon } from "@/components/icons/DesignIcons";
 import {
   footerCompanyLinks,
   footerDemoLinks,
@@ -31,79 +31,59 @@ export function Footer() {
   const percent = isLast ? 100 : Math.round(progress * 100);
   const widthPct = isLast ? 100 : progress * 100;
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const linkColumns = [
+    { title: t("footer.company"), items: footerCompanyLinks },
+    { title: t("footer.demo"), items: footerDemoLinks },
+    { title: t("footer.legal"), items: footerLegalLinks },
+  ];
+
   return (
-    <footer className="mt-8 border-t border-border bg-black pb-10 pt-8 sm:pb-12 sm:pt-12">
+    <footer className="relative mt-8 border-t border-border bg-black py-10 sm:py-12">
+      {/* Кнопка «Наверх»: на широких экранах — в правом верхнем углу подвала,
+          на остальных — отдельной строкой над колонками */}
+      <div className="2xl:absolute 2xl:right-3 2xl:top-8">
+        <Container className="mb-8 flex justify-end 2xl:mb-0 2xl:w-auto 2xl:max-w-none 2xl:px-0">
+          <button
+            type="button"
+            onClick={scrollToTop}
+            className="inline-flex items-center gap-2 rounded-pill border border-white/[0.08] bg-white/5 px-4 py-3 text-sm font-medium text-white backdrop-blur-md transition-colors hover:bg-white/10"
+          >
+            <ArrowUp className="h-4 w-4" strokeWidth={2} aria-hidden />
+            {t("footer.toTop")}
+          </button>
+        </Container>
+      </div>
+
       <Container>
-        <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-start lg:gap-16">
-          <div className="flex flex-col gap-8">
-            <Link href="/" className="inline-flex shrink-0 items-start">
-              <Image
-                src="/images/logo/wordmark.png"
-                alt="Insaitiq SYSTEM"
-                width={120}
-                height={40}
-                className="h-7 w-auto object-contain sm:h-8"
-              />
-            </Link>
-
-            <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3 sm:gap-12 lg:gap-14">
-              <div>
-                <p className="mb-3 text-sm font-medium text-white sm:mb-4">
-                  {t("footer.company")}
-                </p>
-                <ul className="space-y-2">
-                  {footerCompanyLinks.map((item) => (
-                    <li key={item.href}>
-                      <Link
-                        href={item.href}
-                        className="text-sm text-muted transition-colors hover:text-white"
-                      >
-                        {t(item.labelKey as MessageKey)}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div>
-                <p className="mb-3 text-sm font-medium text-white sm:mb-4">
-                  {t("footer.demo")}
-                </p>
-                <ul className="space-y-2">
-                  {footerDemoLinks.map((item) => (
-                    <li key={item.href}>
-                      <Link
-                        href={item.href}
-                        className="text-sm text-muted transition-colors hover:text-white"
-                      >
-                        {t(item.labelKey as MessageKey)}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="col-span-2 sm:col-span-1">
-                <p className="mb-3 text-sm font-medium text-white sm:mb-4">
-                  {t("footer.legal")}
-                </p>
-                <ul className="space-y-2">
-                  {footerLegalLinks.map((item) => (
-                    <li key={item.href}>
-                      <Link
-                        href={item.href}
-                        className="text-sm text-muted transition-colors hover:text-white"
-                      >
-                        {t(item.labelKey as MessageKey)}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+        <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3 sm:gap-x-12 lg:grid-cols-[repeat(3,minmax(0,1fr))_242px] lg:items-start lg:gap-16">
+          {linkColumns.map((column, index) => (
+            <div
+              key={column.title}
+              className={cn(index === 2 && "col-span-2 sm:col-span-1")}
+            >
+              <p className="mb-3 text-sm font-medium text-white">
+                {column.title}
+              </p>
+              <ul className="space-y-1">
+                {column.items.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className="text-sm leading-5 text-muted transition-colors hover:text-white"
+                    >
+                      {t(item.labelKey as MessageKey)}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
+          ))}
 
-          <div className="flex w-full flex-col gap-8 border-t border-border pt-8 sm:max-w-sm sm:gap-10 lg:max-w-none lg:items-end lg:border-0 lg:pt-0">
+          <div className="col-span-2 flex flex-col gap-10 border-t border-border pt-8 sm:col-span-3 lg:col-span-1 lg:border-0 lg:pt-0">
             {/* Mobile: compact next-page button (same scale as slider) */}
             <Link
               href={nextHref}
@@ -121,14 +101,14 @@ export function Footer() {
             {/* Desktop / tablet: progress slider */}
             <Link
               href={nextHref}
-              className="group hidden w-full items-center gap-3 sm:flex sm:w-auto lg:self-end"
+              className="group hidden w-full items-center gap-3 sm:flex"
             >
               <span className="shrink-0 font-pixel text-[11px] uppercase leading-tight tracking-wider text-white sm:text-xs">
                 <span className="block">{line1}</span>
                 {line2 ? <span className="block">{line2}</span> : null}
               </span>
               <span
-                className="relative h-[3px] min-w-0 flex-1 overflow-hidden rounded-full bg-white/25 sm:w-28 sm:flex-none"
+                className="relative h-[3px] w-28 shrink-0 overflow-hidden rounded-full bg-white/25"
                 role="progressbar"
                 aria-valuemin={0}
                 aria-valuemax={100}
@@ -150,50 +130,40 @@ export function Footer() {
               />
             </Link>
 
-            <div className="space-y-3 text-sm lg:text-right">
+            <div className="flex flex-col gap-3 text-sm">
               <a
                 href={site.emailHref}
-                className="block break-all text-white underline underline-offset-4 sm:break-normal"
+                className="break-all text-white underline underline-offset-4 sm:break-normal"
               >
                 {site.email}
               </a>
-              <div className="flex flex-wrap items-center gap-3 lg:justify-end">
+              <div className="flex items-center gap-2.5">
                 <a
                   href={site.phoneHref}
                   className="text-white underline underline-offset-4"
                 >
                   {site.phone}
                 </a>
-                <a
-                  href={site.whatsappHref}
-                  aria-label="WhatsApp"
-                  className="inline-flex h-10 w-10 items-center justify-center opacity-80 transition-opacity hover:opacity-100"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Image
-                    src="/icons/whatsapp.png"
-                    alt=""
-                    width={20}
-                    height={20}
-                    aria-hidden
-                  />
-                </a>
-                <a
-                  href={site.instagramHref}
-                  aria-label="Instagram"
-                  className="inline-flex h-10 w-10 items-center justify-center opacity-80 transition-opacity hover:opacity-100"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Image
-                    src="/icons/instagram.png"
-                    alt=""
-                    width={20}
-                    height={20}
-                    aria-hidden
-                  />
-                </a>
+                <div className="flex items-center">
+                  <a
+                    href={site.whatsappHref}
+                    aria-label="WhatsApp"
+                    className="inline-flex h-10 w-10 items-center justify-center text-white opacity-80 transition-opacity hover:opacity-100"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <WhatsAppIcon className="h-5 w-5" />
+                  </a>
+                  <a
+                    href={site.instagramHref}
+                    aria-label="Instagram"
+                    className="inline-flex h-10 w-10 items-center justify-center text-white opacity-80 transition-opacity hover:opacity-100"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <InstagramIcon className="h-5 w-5" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>

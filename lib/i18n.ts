@@ -31,6 +31,7 @@ const ru = {
   "footer.cookies": "Политика cookies",
   "footer.nextPage": "Следующая страница",
   "footer.backHome": "На главную",
+  "footer.toTop": "Наверх",
   "notFound.title": "Страница не найдена",
   "notFound.body":
     "Такого адреса нет. Вернитесь на главную или выберите раздел в меню.",
@@ -106,6 +107,7 @@ const en: Record<MessageKey, string> = {
   "footer.cookies": "Cookie policy",
   "footer.nextPage": "Next page",
   "footer.backHome": "To home",
+  "footer.toTop": "Back to top",
   "notFound.title": "Page not found",
   "notFound.body":
     "This address does not exist. Go back to the home page or choose a section in the menu.",
@@ -179,6 +181,7 @@ const kz: Record<MessageKey, string> = {
   "footer.cookies": "Cookie саясаты",
   "footer.nextPage": "Келесі бет",
   "footer.backHome": "Басты бетке",
+  "footer.toTop": "Жоғары",
   "notFound.title": "Бет табылмады",
   "notFound.body":
     "Мұндай мекенжай жоқ. Басты бетке оралыңыз немесе мәзірден бөлімді таңдаңыз.",

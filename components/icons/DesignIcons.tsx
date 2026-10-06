@@ -1,0 +1,71 @@
+/**
+ * Иконки из макета Figma (INSAITIQ SYSTEM — Презентация), экспорт «Copy as SVG».
+ * Цвет — currentColor.
+ */
+import type { SVGProps } from "react";
+
+type IconProps = SVGProps<SVGSVGElement>;
+
+export function StrategyIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 26 26" fill="none" aria-hidden {...props}>
+      <path d="M12.85 24.85C19.4774 24.85 24.85 19.4774 24.85 12.85C24.85 6.22256 19.4774 0.849976 12.85 0.849976C6.22256 0.849976 0.849976 6.22256 0.849976 12.85C0.849976 19.4774 6.22256 24.85 12.85 24.85Z" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/> <path d="M17.35 8.34998L14.55 14.55L8.34998 17.35L11.15 11.15L17.35 8.34998Z" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/> <path d="M12.85 0.849976V2.84998M24.85 12.85H22.85M12.85 24.85V22.85M0.849976 12.85H2.84998" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  );
+}
+
+export function TechIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 26 24" fill="none" aria-hidden {...props}>
+      <path d="M22.35 0.849976H3.34998C1.96926 0.849976 0.849976 1.96926 0.849976 3.34998V7.34998C0.849976 8.73069 1.96926 9.84998 3.34998 9.84998H22.35C23.7307 9.84998 24.85 8.73069 24.85 7.34998V3.34998C24.85 1.96926 23.7307 0.849976 22.35 0.849976Z" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/> <path d="M22.35 13.85H3.34998C1.96926 13.85 0.849976 14.9693 0.849976 16.35V20.35C0.849976 21.7307 1.96926 22.85 3.34998 22.85H22.35C23.7307 22.85 24.85 21.7307 24.85 20.35V16.35C24.85 14.9693 23.7307 13.85 22.35 13.85Z" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/> <path d="M5.84998 5.34998H5.94998M5.84998 18.35H5.94998M12.85 5.34998H19.85M12.85 18.35H19.85M12.85 9.84998V13.85" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  );
+}
+
+export function OpsIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 28 26" fill="none" aria-hidden {...props}>
+      <path d="M16.85 0.849976H10.85C9.74541 0.849976 8.84998 1.74541 8.84998 2.84998V5.84998C8.84998 6.95455 9.74541 7.84998 10.85 7.84998H16.85C17.9545 7.84998 18.85 6.95455 18.85 5.84998V2.84998C18.85 1.74541 17.9545 0.849976 16.85 0.849976Z" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/> <path d="M8.84998 17.85H2.84998C1.74541 17.85 0.849976 18.7454 0.849976 19.85V22.85C0.849976 23.9545 1.74541 24.85 2.84998 24.85H8.84998C9.95455 24.85 10.85 23.9545 10.85 22.85V19.85C10.85 18.7454 9.95455 17.85 8.84998 17.85Z" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/> <path d="M24.85 17.85H18.85C17.7454 17.85 16.85 18.7454 16.85 19.85V22.85C16.85 23.9545 17.7454 24.85 18.85 24.85H24.85C25.9545 24.85 26.85 23.9545 26.85 22.85V19.85C26.85 18.7454 25.9545 17.85 24.85 17.85Z" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/> <path d="M13.85 7.84998V12.85M5.84998 17.85V12.85H21.85V17.85" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  );
+}
+
+export function FinanceIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 26 24" fill="none" aria-hidden {...props}>
+      <path d="M3.84998 5.8501V3.8501C3.84998 3.05445 4.16605 2.29139 4.72866 1.72878C5.29126 1.16617 6.05433 0.850098 6.84998 0.850098H20.85V5.8501M3.84998 5.8501C3.05433 5.8501 2.29126 6.16617 1.72866 6.72878C1.16605 7.29139 0.849976 8.05445 0.849976 8.8501V19.8501C0.849976 20.6457 1.16605 21.4088 1.72866 21.9714C2.29126 22.534 3.05433 22.8501 3.84998 22.8501H21.85C22.6456 22.8501 23.4087 22.534 23.9713 21.9714C24.5339 21.4088 24.85 20.6457 24.85 19.8501V8.8501C24.85 8.05445 24.5339 7.29139 23.9713 6.72878C23.4087 6.16617 22.6456 5.8501 21.85 5.8501H3.84998Z" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/> <path d="M24.85 11.8501H17.85C17.0543 11.8501 16.2913 12.1662 15.7287 12.7288C15.166 13.2914 14.85 14.0544 14.85 14.8501C14.85 15.6457 15.166 16.4088 15.7287 16.9714C16.2913 17.534 17.0543 17.8501 17.85 17.8501H24.85M18.85 14.8501H18.95" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  );
+}
+
+export function MgmtIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 23 26" fill="none" aria-hidden {...props}>
+      <path d="M3.84998 24.9308V1.93083M3.84998 2.93083C7.84998 -1.06917 11.85 6.93083 15.85 2.93083C19.85 -1.06917 21.85 1.93083 21.85 1.93083V14.9308C21.85 14.9308 19.85 11.9308 15.85 15.9308C11.85 19.9308 7.84998 11.9308 3.84998 15.9308M0.849976 24.9308H6.84998" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  );
+}
+
+export function CommerceIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 28 27" fill="none" aria-hidden {...props}>
+      <path d="M2.84998 24.8501V14.8501M10.85 24.8501V10.8501M18.85 24.8501V7.75806M1.84998 8.8501L9.84998 3.8501L15.85 5.8501L24.85 0.850098M24.85 5.8501V0.850098H19.85M0.849976 25.8501H26.85" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  );
+}
+
+export function WhatsAppIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 20 20" fill="none" aria-hidden {...props}>
+      <path d="M17.0834 9.78529C17.0834 13.6513 13.9494 16.7853 10.0834 16.7853C8.79937 16.7853 7.59537 16.4393 6.56037 15.8353L2.83337 16.9167L3.91537 13.2283C3.38137 12.2143 3.08337 11.0383 3.08337 9.78529C3.08337 5.91929 6.21737 2.78529 10.0834 2.78529C13.9494 2.78529 17.0834 5.91929 17.0834 9.78529Z" stroke="currentColor" strokeWidth="1.33333" strokeLinecap="round" strokeLinejoin="round"/> <path d="M7.51667 6.34167C7.36667 6.00833 7.21667 6.00833 7.08333 6H6.70833C6.575 6 6.35833 6.05 6.18333 6.25C6.00833 6.45 5.5 6.91667 5.5 7.875C5.5 8.83333 6.2 9.75833 6.3 9.89167C6.4 10.025 7.69167 12.1167 9.74167 12.925C11.45 13.5917 11.7917 13.4583 12.1667 13.425C12.5333 13.3917 13.3583 12.9417 13.525 12.475C13.6917 12.0083 13.6917 11.6083 13.6417 11.525C13.5917 11.4417 13.4583 11.3917 13.2583 11.2917C13.0583 11.1917 12.0667 10.7083 11.8833 10.6417C11.7 10.575 11.5667 10.5417 11.4333 10.7417C11.3 10.9417 10.9167 11.3917 10.8 11.525C10.6833 11.6583 10.5667 11.675 10.3667 11.575C10.1667 11.475 9.51667 11.2583 8.75 10.575C8.15 10.0417 7.75 9.38333 7.63333 9.18333C7.51667 8.98333 7.625 8.875 7.725 8.775C7.81667 8.68333 7.925 8.54167 8.025 8.425C8.125 8.30833 8.15833 8.225 8.225 8.09167C8.29167 7.95833 8.25833 7.84167 8.20833 7.74167C8.15833 7.64167 7.75833 6.66667 7.59167 6.33333L7.51667 6.34167Z" fill="currentColor"/>
+    </svg>
+  );
+}
+
+export function InstagramIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 20 20" fill="none" aria-hidden {...props}>
+      <path d="M12.9167 2.83333H7.08337C4.73616 2.83333 2.83337 4.73612 2.83337 7.08333V12.9167C2.83337 15.2639 4.73616 17.1667 7.08337 17.1667H12.9167C15.2639 17.1667 17.1667 15.2639 17.1667 12.9167V7.08333C17.1667 4.73612 15.2639 2.83333 12.9167 2.83333Z" stroke="currentColor" strokeWidth="1.33333"/> <path d="M10 13.4167C11.887 13.4167 13.4167 11.887 13.4167 9.99999C13.4167 8.11302 11.887 6.58333 10 6.58333C8.11307 6.58333 6.58337 8.11302 6.58337 9.99999C6.58337 11.887 8.11307 13.4167 10 13.4167Z" stroke="currentColor" strokeWidth="1.33333"/> <path d="M14.5834 6.29167C15.0666 6.29167 15.4584 5.89992 15.4584 5.41667C15.4584 4.93342 15.0666 4.54167 14.5834 4.54167C14.1001 4.54167 13.7084 4.93342 13.7084 5.41667C13.7084 5.89992 14.1001 6.29167 14.5834 6.29167Z" fill="currentColor"/>
+    </svg>
+  );
+}

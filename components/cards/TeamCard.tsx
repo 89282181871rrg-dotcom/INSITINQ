@@ -1,13 +1,29 @@
 import Image from "next/image";
-import { teamIconSrc } from "@/lib/content";
+import {
+  CommerceIcon,
+  FinanceIcon,
+  MgmtIcon,
+  OpsIcon,
+  StrategyIcon,
+  TechIcon,
+} from "@/components/icons/DesignIcons";
 import type { TeamMember } from "@/types";
+
+const roleIcons: Record<TeamMember["icon"], typeof StrategyIcon> = {
+  strategy: StrategyIcon,
+  tech: TechIcon,
+  ops: OpsIcon,
+  finance: FinanceIcon,
+  mgmt: MgmtIcon,
+  commerce: CommerceIcon,
+};
 
 type TeamCardProps = {
   member: TeamMember;
 };
 
 export function TeamCard({ member }: TeamCardProps) {
-  const iconSrc = teamIconSrc[member.icon];
+  const RoleIcon = roleIcons[member.icon];
 
   return (
     <article className="flex flex-col gap-2.5 sm:gap-4">
@@ -27,18 +43,13 @@ export function TeamCard({ member }: TeamCardProps) {
         )}
       </div>
 
-      <div className="flex items-start justify-between gap-3">
+      <div className="flex items-center justify-between gap-3">
         <h3 className="font-sans text-base font-semibold leading-snug text-white sm:text-lg">
           {member.firstName} {member.lastName}
         </h3>
-        <Image
-          src={iconSrc}
-          alt=""
-          width={40}
-          height={40}
-          className="mt-0.5 h-8 w-8 shrink-0 object-contain sm:h-10 sm:w-10"
-          aria-hidden
-        />
+        <span className="flex h-8 w-8 shrink-0 items-center justify-center text-white">
+          <RoleIcon className="h-6 w-6" />
+        </span>
       </div>
 
       <p className="text-sm leading-snug text-muted sm:leading-relaxed">{member.bio}</p>
