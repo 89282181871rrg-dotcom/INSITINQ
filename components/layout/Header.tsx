@@ -14,12 +14,15 @@ import type { MessageKey } from "@/lib/i18n";
 
 function Logo() {
   return (
-    <Link href="/" className="inline-flex min-w-0 shrink items-center" aria-label="Insaitiq SYSTEM">
+    <Link href="/" className="inline-flex min-w-0 shrink items-center" aria-label="Insaitiq Systems">
+      {/* Новый логотип (макет Figma «Insaitiq — Компактные версии»).
+          Если руководство не согласует — вернуть /images/logo/wordmark.png (140×46). */}
       <Image
-        src="/images/logo/wordmark.png"
-        alt="Insaitiq SYSTEM"
-        width={140}
-        height={46}
+        src="/images/logo/insaitiq-dark.svg"
+        alt="Insaitiq Systems"
+        width={211}
+        height={62}
+        unoptimized
         className="h-7 w-auto max-w-[7.5rem] object-contain sm:h-9 sm:max-w-none lg:h-10"
         priority
       />
