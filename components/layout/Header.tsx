@@ -5,6 +5,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Container } from "@/components/ui/Container";
+import { Menu, X } from "lucide-react";
+import { LanguageDropdown } from "@/components/layout/LanguageDropdown";
 import { MenuPanel } from "@/components/layout/MenuPanel";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
 import { useHeaderScrolled } from "@/lib/hooks/useHeaderScrolled";
@@ -16,7 +18,7 @@ import type { MessageKey } from "@/lib/i18n";
 function Logo() {
   return (
     <Link href="/" className="inline-flex min-w-0 shrink items-center" aria-label="Insaitiq Systems">
-      {/* Новый логотип (макет Figma «Insaitiq — Компактные версии»).
+      {/* Новый логотип (макет Figma «Insaitiq — Компактные версии»), на десктопе −20% (40 → 32px).
           Если руководство не согласует — вернуть /images/logo/wordmark.png (140×46). */}
       <Image
         src="/images/logo/insaitiq-dark.svg"
@@ -24,7 +26,7 @@ function Logo() {
         width={211}
         height={62}
         unoptimized
-        className="theme-logo-dark h-7 w-auto max-w-[7.5rem] object-contain sm:h-9 sm:max-w-none lg:h-10"
+        className="theme-logo-dark h-7 w-auto max-w-[7.5rem] object-contain sm:h-9 sm:max-w-none lg:h-8"
         priority
       />
       <Image
@@ -33,7 +35,7 @@ function Logo() {
         width={211}
         height={62}
         unoptimized
-        className="theme-logo-light h-7 w-auto max-w-[7.5rem] object-contain sm:h-9 sm:max-w-none lg:h-10"
+        className="theme-logo-light h-7 w-auto max-w-[7.5rem] object-contain sm:h-9 sm:max-w-none lg:h-8"
       />
     </Link>
   );
@@ -84,7 +86,7 @@ export function Header() {
                 href={item.href}
                 className={cn(
                   "font-pixel text-xs uppercase tracking-wider transition-colors hover:text-foreground sm:text-[13px]",
-                  active ? "text-foreground" : "text-foreground/80",
+                  active ? "text-primary" : "text-foreground/80",
                 )}
                 aria-current={active ? "page" : undefined}
               >
@@ -95,7 +97,6 @@ export function Header() {
         </nav>
 
         <div className="flex shrink-0 items-center gap-1.5 sm:gap-3">
-          <ThemeToggle />
           <Link
             href="/contacts"
             className="inline-flex h-9 items-center justify-center rounded-pill bg-primary px-3 font-pixel text-[10px] uppercase tracking-wider text-white transition-colors hover:bg-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:px-5 sm:text-xs"
@@ -103,41 +104,26 @@ export function Header() {
             {t("nav.discuss")}
           </Link>
 
+          {/* Десктоп: Обсудить — флажок — тема. Меню не нужно: разделы уже во вкладках шапки */}
+          <div className="hidden lg:block">
+            <LanguageDropdown />
+          </div>
+          <ThemeToggle />
+
+          {/* Мобилка/планшет: бургер открывает меню с разделами и языками */}
           <button
             type="button"
-            className="inline-flex h-9 min-w-[4.75rem] items-center justify-center overflow-hidden rounded-pill border border-foreground/25 bg-transparent px-3 text-foreground sm:min-w-[5.5rem] sm:px-4"
+            className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-pill border border-foreground/25 text-foreground transition-colors hover:bg-foreground/5 lg:hidden"
+            aria-label={menuOpen ? t("nav.close") : t("nav.menu")}
             aria-expanded={menuOpen}
             aria-controls="site-menu-panel"
             onClick={() => setMenuOpen((v) => !v)}
           >
-            <span className="sr-only">
-              {menuOpen ? t("nav.close") : t("nav.menu")}
-            </span>
-            <span
-              aria-hidden
-              className="relative block h-5 w-[4rem] font-pixel text-[11px] uppercase tracking-wider sm:w-[4.75rem] sm:text-[13px]"
-            >
-              <span
-                className={cn(
-                  "absolute inset-0 flex items-center justify-center transition-transform duration-200 ease-out-soft",
-                  menuOpen
-                    ? "-translate-y-full opacity-0"
-                    : "translate-y-0 opacity-100",
-                )}
-              >
-                {t("nav.menu")}
-              </span>
-              <span
-                className={cn(
-                  "absolute inset-0 flex items-center justify-center transition-transform duration-200 ease-out-soft",
-                  menuOpen
-                    ? "translate-y-0 opacity-100"
-                    : "translate-y-full opacity-0",
-                )}
-              >
-                {t("nav.close")}
-              </span>
-            </span>
+            {menuOpen ? (
+              <X className="h-4 w-4" strokeWidth={1.75} aria-hidden />
+            ) : (
+              <Menu className="h-4 w-4" strokeWidth={1.75} aria-hidden />
+            )}
           </button>
         </div>
 

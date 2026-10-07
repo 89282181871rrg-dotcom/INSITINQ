@@ -6,7 +6,7 @@ import { useLocale } from "@/lib/locale-context";
 import type { Locale } from "@/types";
 
 /** Флаги языков: public/icons/flag-*.png */
-const locales: { code: Locale; label: string; flagSrc: string }[] = [
+export const locales: { code: Locale; label: string; flagSrc: string }[] = [
   { code: "kz", label: "KZ", flagSrc: "/icons/flag-kz.png" },
   { code: "ru", label: "RU", flagSrc: "/icons/flag-ru.png" },
   { code: "en", label: "EN", flagSrc: "/icons/flag-en.png" },
@@ -14,9 +14,10 @@ const locales: { code: Locale; label: string; flagSrc: string }[] = [
 
 type LanguageSwitcherProps = {
   className?: string;
+  onSelect?: () => void;
 };
 
-export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
+export function LanguageSwitcher({ className, onSelect }: LanguageSwitcherProps) {
   const { locale, setLocale } = useLocale();
 
   return (
@@ -35,7 +36,10 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
                 "flex w-full items-center gap-2.5 rounded-md px-1 py-1 text-left transition-colors",
                 active ? "font-bold text-foreground" : "text-muted hover:text-foreground",
               )}
-              onClick={() => setLocale(item.code)}
+              onClick={() => {
+                setLocale(item.code);
+                onSelect?.();
+              }}
             >
               <Image
                 src={item.flagSrc}

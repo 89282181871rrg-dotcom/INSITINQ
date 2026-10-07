@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import Image from "next/image";
+import { Mail, Phone, User, type LucideIcon } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/Button";
@@ -11,14 +11,15 @@ import { Textarea } from "@/components/ui/Textarea";
 import { contactSchema, type ContactSchema } from "@/lib/schema";
 import { useLocale } from "@/lib/locale-context";
 
-function FieldIcon({ src }: { src: string }) {
+/**
+ * Иконка поля как в макете: 20×20, #A1A1AA.
+ * top = подпись (20px) + отступ (8px) + (48 − 20) / 2 → 42px — по центру поля.
+ */
+function FieldIcon({ icon: Icon }: { icon: LucideIcon }) {
   return (
-    <Image
-      src={src}
-      alt=""
-      width={18}
-      height={18}
-      className="theme-invert pointer-events-none absolute left-4 top-[2.9rem] h-[18px] w-[18px] object-contain opacity-90"
+    <Icon
+      className="pointer-events-none absolute left-4 top-[42px] h-5 w-5 text-muted"
+      strokeWidth={2}
       aria-hidden
     />
   );
@@ -101,9 +102,9 @@ export function ContactForm() {
           {...register("task")}
         />
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 lg:pt-1">
           <div className="relative">
-            <FieldIcon src="/icons/form-user.png" />
+            <FieldIcon icon={User} />
             <Input
               label={t("contact.fullName")}
               className="pl-11"
@@ -117,7 +118,7 @@ export function ContactForm() {
 
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="relative">
-              <FieldIcon src="/icons/form-mail.png" />
+              <FieldIcon icon={Mail} />
               <Input
                 label={t("contact.company")}
                 className="pl-11"
@@ -131,7 +132,7 @@ export function ContactForm() {
             </div>
 
             <div className="relative">
-              <FieldIcon src="/icons/form-phone.png" />
+              <FieldIcon icon={Phone} />
               <Input
                 label={t("contact.phone")}
                 className="pl-11"

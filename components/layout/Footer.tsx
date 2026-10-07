@@ -44,8 +44,9 @@ export function Footer() {
   return (
     <footer className="relative mt-8 border-t border-border bg-footer py-10 sm:py-12">
       {/* Кнопка «Наверх»: на широких экранах — в правом верхнем углу подвала,
-          на остальных — отдельной строкой над колонками */}
-      <div className="2xl:absolute 2xl:right-3 2xl:top-8">
+          на планшете/ноутбуке — отдельной строкой над колонками,
+          на мобилке — внизу подвала напротив «Следующая страница / На главную» */}
+      <div className="hidden sm:block 2xl:absolute 2xl:right-3 2xl:top-8">
         <Container className="mb-8 flex justify-end 2xl:mb-0 2xl:w-auto 2xl:max-w-none 2xl:px-0">
           <button
             type="button"
@@ -84,19 +85,33 @@ export function Footer() {
           ))}
 
           <div className="col-span-2 flex flex-col gap-10 border-t border-border pt-8 sm:col-span-3 lg:col-span-1 lg:border-0 lg:pt-0">
-            {/* Mobile: compact next-page button (same scale as slider) */}
-            <Link
-              href={nextHref}
-              className="inline-flex w-auto max-w-full items-center gap-3 self-start rounded-2xl bg-foreground/10 py-2.5 pl-4 pr-2.5 text-foreground transition-colors hover:bg-foreground/15 sm:hidden"
-            >
-              <span className="font-pixel text-[11px] uppercase leading-tight tracking-wider">
-                <span className="block">{line1}</span>
-                {line2 ? <span className="block">{line2}</span> : null}
-              </span>
-              <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-background">
-                <ArrowRight className="h-3.5 w-3.5 text-foreground" strokeWidth={1.75} aria-hidden />
-              </span>
-            </Link>
+            {/* Mobile: внизу блока — «Следующая страница» и напротив «Наверх» */}
+            <div className="order-last flex items-center justify-between gap-3 sm:hidden">
+              <Link
+                href={nextHref}
+                className="inline-flex w-auto max-w-full items-center gap-3 rounded-2xl bg-foreground/10 py-2.5 pl-4 pr-2.5 text-foreground transition-colors hover:bg-foreground/15"
+              >
+                <span className="font-pixel text-[11px] uppercase leading-tight tracking-wider">
+                  <span className="block">{line1}</span>
+                  {line2 ? <span className="block">{line2}</span> : null}
+                </span>
+                <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-background">
+                  <ArrowRight
+                    className="h-3.5 w-3.5 text-foreground"
+                    strokeWidth={1.75}
+                    aria-hidden
+                  />
+                </span>
+              </Link>
+              <button
+                type="button"
+                onClick={scrollToTop}
+                className="inline-flex shrink-0 items-center gap-2 rounded-pill border border-foreground/[0.08] bg-foreground/5 px-4 py-3 text-sm font-medium text-foreground backdrop-blur-md transition-colors hover:bg-foreground/10"
+              >
+                <ArrowUp className="h-4 w-4" strokeWidth={2} aria-hidden />
+                {t("footer.toTop")}
+              </button>
+            </div>
 
             {/* Desktop / tablet: progress slider */}
             <Link
