@@ -16,17 +16,12 @@ const TITLE_WIDTH_EM: Record<Locale, number> = { ru: 9.6, en: 10.3, kz: 12.7 };
 export function Hero() {
   const { t, locale } = useLocale();
   const titleLines = t("hero.title").split("\n");
-  const subtitleLines = t("hero.subtitle").split("\n");
 
   // Отступы главной = отступам остальных страниц (40 / 80 / 96px):
   // шапка — обложка — о нас — партнёры — подвал
   return (
     <section className="pt-10 sm:pt-20 lg:pt-24">
       <Container>
-        <p className="mb-5 text-center text-[0.95rem] leading-snug text-foreground/90 sm:mb-10 sm:text-lg sm:leading-relaxed md:text-xl">
-          {subtitleLines.join(" ")}
-        </p>
-
         <div className="relative isolate aspect-[2.2/1] [container-type:inline-size] w-full overflow-hidden rounded-2xl sm:aspect-[2.3/1] sm:rounded-3xl md:aspect-[2.55/1] lg:aspect-[2.7/1] lg:rounded-[2rem]">
           <Image
             src="/images/hero/banner.png"

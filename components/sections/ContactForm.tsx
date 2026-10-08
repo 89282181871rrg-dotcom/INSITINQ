@@ -84,11 +84,8 @@ export function ContactForm() {
       className="rounded-[1.75rem] border border-border bg-card p-5 shadow-soft sm:rounded-[2rem] sm:p-8 lg:p-10"
       noValidate
     >
-      {/* Заголовок и подзаголовок — на всю ширину карточки */}
-      <h2 className="font-pixel text-3xl uppercase tracking-[0.025em] text-foreground sm:text-4xl lg:text-5xl">
-        {t("contact.formTitle")}
-      </h2>
-      <p className="mt-5 text-sm font-medium leading-6 text-foreground sm:text-base">
+      {/* Подзаголовок на всю ширину карточки; слово «ЗАЯВКА» убрано по просьбе дизайнера */}
+      <p className="text-sm font-medium leading-6 text-foreground sm:text-base">
         {t("contact.formIntro")}
       </p>
 
@@ -155,7 +152,8 @@ export function ContactForm() {
             >
               {t("contact.submit")}
             </Button>
-            <p className="text-xs leading-4 text-muted">
+            {/* По центру под кнопкой; 11px — чтобы на десктопе влезало в одну строку */}
+            <p className="text-center text-[11px] leading-4 text-muted lg:whitespace-nowrap">
               {t("contact.consentText")}{" "}
               <Link
                 href="/legal/consent"

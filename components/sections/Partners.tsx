@@ -87,7 +87,7 @@ export function Partners() {
     <section className="overflow-hidden py-10 sm:py-20 lg:py-24">
       <Container>
         <ScrollReveal>
-          <h2 className="mb-6 px-2 text-center text-[1.65rem] font-bold uppercase leading-tight tracking-tight text-foreground sm:mb-10 sm:text-4xl lg:text-[2.5rem]">
+          <h2 className="mb-6 px-2 text-center text-[1.65rem] font-bold uppercase leading-tight tracking-tight text-primary sm:mb-10 sm:text-4xl lg:text-[2.5rem]">
             {t("partners.title")}
           </h2>
         </ScrollReveal>

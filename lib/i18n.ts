@@ -47,7 +47,7 @@ const ru = {
   "about.title": "О нас",
   "about.body":
     "Insaitiq Systems — синергия специалистов с глубоким пониманием операционных процессов, закупок, документооборота, аналитики и корпоративного управления. Разрабатываем Enterprise-платформы и внедряем AI там, где он дает реальный экономический эффект.",
-  "partners.title": "Партнёры и компании",
+  "partners.title": "Наши партнёры",
   "industries.title": "Опыт работы в ключевых отраслях",
   "demo.title": "Демо",
   "demo.intro":
@@ -125,7 +125,7 @@ const en: Record<MessageKey, string> = {
   "about.title": "About us",
   "about.body":
     "Insaitiq Systems is a team of specialists with deep expertise in operations, procurement, document flow, analytics, and corporate governance. We build Enterprise platforms and deploy AI where it creates real economic impact.",
-  "partners.title": "Partners & companies",
+  "partners.title": "Our partners",
   "industries.title": "Experience across key industries",
   "demo.title": "Demo",
   "demo.intro":
@@ -201,7 +201,7 @@ const kz: Record<MessageKey, string> = {
   "about.title": "Біз туралы",
   "about.body":
     "Insaitiq Systems — операциялық процестер, сатып алу, құжат айналымы, аналитика және корпоративтік басқаруды терең түсінетін мамандар синергиясы. Enterprise-платформаларды әзірлеп, AI-ды нақты экономикалық әсер беретін жерге енгіземіз.",
-  "partners.title": "Серіктестер мен компаниялар",
+  "partners.title": "Біздің серіктестер",
   "industries.title": "Негізгі салалардағы тәжірибе",
   "demo.title": "Демо",
   "demo.intro":
