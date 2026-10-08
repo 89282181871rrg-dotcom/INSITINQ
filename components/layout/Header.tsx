@@ -63,7 +63,8 @@ export function Header() {
   return (
     <header
       className={cn(
-        "header sticky top-0 z-50 transition-[background-color,box-shadow,backdrop-filter,border-color] duration-200",
+        // lg:border-border — тонкая разделительная линия под шапкой на десктопе всегда
+        "header sticky top-0 z-50 transition-[background-color,box-shadow,backdrop-filter,border-color] duration-200 lg:border-border",
         scrolled && "header-scrolled",
       )}
     >

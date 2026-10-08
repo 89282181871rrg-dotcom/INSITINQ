@@ -1,12 +1,14 @@
 import type { NavItem } from "@/types";
 
-/** Header nav — «О компании» ведёт к блоку «О нас» на главной */
+/**
+ * Header nav — «О компании» ведёт к блоку «О нас» на главной.
+ * «Контакты» убраны: ту же страницу открывает «Обсудить» и переход прокруткой (pageOrder).
+ */
 export const mainNav: NavItem[] = [
   { href: "/#about", labelKey: "nav.about" },
   { href: "/industries", labelKey: "nav.industries" },
   { href: "/demo", labelKey: "nav.demo" },
   { href: "/team", labelKey: "nav.team" },
-  { href: "/contacts", labelKey: "nav.contact" },
 ];
 
 /** Pixel menu panel links */
@@ -15,7 +17,6 @@ export const menuNav: NavItem[] = [
   { href: "/industries", labelKey: "nav.industries" },
   { href: "/demo", labelKey: "nav.demo" },
   { href: "/team", labelKey: "nav.team" },
-  { href: "/contacts", labelKey: "nav.contact" },
 ];
 
 export const footerCompanyLinks: NavItem[] = [
@@ -27,10 +28,7 @@ export const footerCompanyLinks: NavItem[] = [
 ];
 
 export const footerDemoLinks: NavItem[] = [
-  { href: "/demo#ai-school", labelKey: "footer.demoAiSchool" },
-  { href: "/demo#ai-assistant", labelKey: "footer.demoAiAssistant" },
   { href: "/demo#crm", labelKey: "footer.demoCrm" },
-  { href: "/demo#restaurant-os", labelKey: "footer.demoRestaurantOs" },
 ];
 
 export const footerLegalLinks: NavItem[] = [
