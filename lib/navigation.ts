@@ -19,12 +19,14 @@ export const menuNav: NavItem[] = [
   { href: "/team", labelKey: "nav.team" },
 ];
 
+/**
+ * «Кейсы» скрыты, пока страница пустая. «Демо» не дублируем:
+ * оно есть отдельной колонкой справа со списком проектов (magaserho, 09.10).
+ */
 export const footerCompanyLinks: NavItem[] = [
   { href: "/", labelKey: "footer.home" },
   { href: "/#about", labelKey: "footer.about" },
   { href: "/industries", labelKey: "footer.industries" },
-  { href: "/cases", labelKey: "footer.cases" },
-  { href: "/demo", labelKey: "footer.demo" },
 ];
 
 export const footerDemoLinks: NavItem[] = [

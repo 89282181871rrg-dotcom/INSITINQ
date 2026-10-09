@@ -4,6 +4,7 @@ import { Unbounded } from "next/font/google";
 import { Providers } from "@/components/Providers";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { CookieNotice } from "@/components/layout/CookieNotice";
 import { themeInitScript } from "@/lib/theme";
 import "./globals.css";
 
@@ -50,6 +51,7 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
+          <CookieNotice />
         </Providers>
       </body>
     </html>
