@@ -55,7 +55,8 @@ export function CookieNotice() {
             >
               {t("cookies.link")}
             </Link>
-            .
+            {/* в казахском «қараңыз» идёт после ссылки */}
+            {t("cookies.after")}.
           </p>
           <button
             type="button"
