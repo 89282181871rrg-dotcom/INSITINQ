@@ -117,6 +117,7 @@ export const demos: DemoItem[] = [
     cta: "Протестировать",
     href: "https://gargalo.ru/",
     imageSrc: "/images/demo/gargalo.webp",
+    imageFull: true,
     imageAlt: "Превью Gargalo",
   },
   {
