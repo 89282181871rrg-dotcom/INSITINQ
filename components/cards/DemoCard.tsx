@@ -23,12 +23,34 @@ export function DemoCard({ item, reverse = false }: DemoCardProps) {
           reverse && "lg:order-2",
         )}
       >
-        {item.imageSrc ? (
+        {item.imageSrc && item.imageFull ? (
+          // Широкий скриншот: рамка 16:10 как у всех, картинка целиком,
+          // а поля сверху и снизу — та же картинка, размытая и затемнённая.
+          <div className="relative aspect-[16/10] w-full overflow-hidden">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={item.imageSrc}
+              alt=""
+              aria-hidden
+              className="absolute inset-0 h-full w-full scale-110 object-cover blur-2xl brightness-50"
+              loading="lazy"
+              decoding="async"
+            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={item.imageSrc}
+              alt={item.imageAlt}
+              className="relative h-full w-full object-contain"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        ) : item.imageSrc ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={item.imageSrc}
             alt={item.imageAlt}
-            className="block h-auto w-full max-w-full align-top"
+            className="block aspect-[16/10] w-full max-w-full object-cover object-top align-top"
             loading="lazy"
             decoding="async"
           />
@@ -43,7 +65,7 @@ export function DemoCard({ item, reverse = false }: DemoCardProps) {
         <h3 className="font-sans text-xl font-semibold uppercase tracking-wide text-foreground sm:text-3xl">
           {item.title}
         </h3>
-        <p className="mt-3 text-[15px] leading-relaxed text-muted sm:mt-4 sm:text-base">
+        <p className="mt-3 whitespace-pre-line text-[15px] leading-relaxed text-muted sm:mt-4 sm:text-base">
           {item.description}
         </p>
         <div className="mt-5 sm:mt-6">

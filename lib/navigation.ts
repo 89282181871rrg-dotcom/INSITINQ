@@ -31,6 +31,9 @@ export const footerCompanyLinks: NavItem[] = [
 
 export const footerDemoLinks: NavItem[] = [
   { href: "/demo#crm", labelKey: "footer.demoCrm" },
+  { href: "/demo#gargalo", labelKey: "footer.demoGargalo" },
+  { href: "/demo#ecolife", labelKey: "footer.demoEcolife" },
+  { href: "/demo#talimger", labelKey: "footer.demoTalimger" },
 ];
 
 export const footerLegalLinks: NavItem[] = [

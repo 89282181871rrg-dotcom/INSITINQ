@@ -38,6 +38,8 @@ export type DemoItem = {
   /** TODO: replace with real preview from mockups */
   imageSrc?: string;
   imageAlt: string;
+  /** Широкий скриншот: целиком внутри рамки 16:10, поля — размытая копия */
+  imageFull?: boolean;
 };
 
 export type TeamMember = {

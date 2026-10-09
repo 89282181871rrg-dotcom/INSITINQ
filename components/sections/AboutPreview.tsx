@@ -20,7 +20,7 @@ export function AboutPreview() {
           <div className="mx-auto grid max-w-5xl gap-y-6 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-x-24">
             <div className="flex flex-col gap-6 lg:gap-8">
               <SectionTitle>{t("about.title")}</SectionTitle>
-              <p className="max-w-xl text-[0.95rem] leading-relaxed text-foreground/90 sm:text-lg">
+              <p className="max-w-xl whitespace-pre-line text-[0.95rem] leading-relaxed text-foreground/90 sm:text-lg">
                 {t("about.body")}
               </p>
             </div>
